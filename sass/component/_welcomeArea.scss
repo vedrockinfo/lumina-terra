@@ -1,0 +1,37 @@
+.welcome-area {
+    background: $color-tertiary;
+    .row{
+        @include respond (minWidth768){
+            display: flex;
+    align-items: center;
+        }
+    }
+
+    .img-wrapper {
+        padding: 2rem;
+        background: $color-white;
+    }
+
+    .content-wrapper {
+        text-align: center;
+
+        img {
+            mix-blend-mode: color-dodge;
+            opacity: 0.7;
+            width: 10rem;
+            @include respond (maxWidth768){
+                margin-top: 2rem;
+            }
+        }
+
+        .heading-primary {
+            font-size: 4.2rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+        }
+
+        .globalbtn-one {
+            @include globalBtnOne;
+        }
+    }
+}

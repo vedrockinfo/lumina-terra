@@ -1,0 +1,140 @@
+.hero-section {
+    padding-top: 10rem;
+    background-image: $mainBg;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .hero-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-grid-item {
+            flex: 0 0 50%;
+            max-width: 50%;
+            @include respond (maxWidth768){
+                max-width: 100%;
+                text-align: center;
+                &:first-child{
+                    padding: 30px 0 20px 0;
+                    width: max-content;
+                    margin: auto;
+                }
+            }
+
+            .content-wrapper {
+                position: relative;
+
+                &::before {
+                    @include vector(111.4px, 109.32px);
+                    left: 83px;
+                    top: -9.9rem;
+                    @include respond (maxWidth1200) {
+                        @include vector(80.4px, 79.32px);
+                        left: 62px;
+                        top: -7.9rem;
+                    }
+                    @include respond (maxWidth992){
+                        left: 30px;
+                    }
+                    @include respond (maxWidth768){
+                        display: none;
+                    }
+                }
+
+                &::after {
+                    @include vector(162.4px, 167.32px);
+                    right: -14px;
+                    bottom: -144px;
+                    @include respond (maxWidth1200) {
+                        @include vector(92.4px, 87.32px);
+                        right: 40px;
+    bottom: -50px;
+                    }
+                    @include respond (maxWidth768){
+                        display: none;
+                    }
+                }
+
+                h1 {
+                    font-family: $fontTertiary;
+                    text-transform: capitalize;
+                    color: $color-primary;
+                    font-size: 73px;
+                    letter-spacing: 0.78px;
+                    margin: 0;
+                    @include respond (maxWidth1200){
+                        font-size: 53px;
+                    }
+                    @include respond (maxWidth992){
+                        font-size: 36px;
+                    }
+                }
+
+                h3 {
+                    text-align: center;
+                    font-size: 58px;
+                    text-transform: capitalize;
+                    color: $color-secondary;
+                    margin: 0;
+                    @include respond (maxWidth1200){
+                        font-size: 40px;
+                    }
+                    @include respond (maxWidth992){
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            .img-wrapper {
+                width: 50rem;
+                height: 50rem;
+                text-align: right;
+                border: 1.5px solid $color-primary;
+                margin-left: auto;
+                border-radius: 100%;
+                position: relative;
+                @include respond (maxWidth1200){
+                    width: 40rem;
+                    height: 40rem;
+                }
+                @include respond (maxWidth768){
+                    margin-right: auto;
+                }
+                @include respond (maxWidth575){
+                    width: 28rem;
+                    height: 28rem;
+                }
+
+                &::after {
+                    @include vector(113.4px, 112.32px);
+                    right: -27px;
+                    top: 40px;
+                    @include respond (maxWidth1200){
+                        right: -45px;
+                        top: 12px;
+                    }
+                    @include respond (maxWidth575){
+                        @include vector(50.4px, 48.32px);
+                    right: 0;
+                    top: 9px;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    padding: 1rem;
+                    object-position: 67% 100%;
+                }
+            }
+        }
+
+        @include respond (maxWidth768) {
+            display: block;
+        }
+    }
+}

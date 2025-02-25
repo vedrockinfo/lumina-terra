@@ -1,0 +1,48 @@
+.p-top{
+    padding-top: 7rem;
+
+    @include respond(tab-port) {
+        padding-top: 7rem;
+    }
+}
+
+.p-bottom{
+    padding-bottom: 7rem;
+
+    @include respond(tab-port) {
+        padding-bottom: 7rem;
+    }
+}
+.m-top{
+    margin-top: 7rem;
+
+    @include respond(tab-port) {
+        margin-top: 7rem;
+    }
+}
+
+.m-bottom{
+    margin-bottom: 7rem;
+
+    @include respond(tab-port) {
+        margin-bottom: 7rem;
+    }
+}
+.owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    button{
+        background: $color-primary!important;
+        height: 30px;
+    width: 30px;
+        i{
+            color: $color-white;
+        }
+    }
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}

@@ -1,0 +1,45 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == maxWidth575 {
+        @media only screen and (max-width: 575px) { @content };    //600px
+    }
+    @if $breakpoint == maxWidth768 {
+        @media only screen and (max-width: 767.9px) { @content };     //900px
+    }
+    @if $breakpoint == minWidth768 {
+        @media only screen and (min-width: 768px) { @content };     //900px
+    }
+    @if $breakpoint == maxWidth992 {
+        @media only screen and (max-width: 991.9px) { @content };    //1200px
+    }
+    @if $breakpoint == minWidth992 {
+        @media only screen and (min-width: 992px) { @content };    //1200px
+    }
+    @if $breakpoint == maxWidth1200 {
+        @media only screen and (max-width: 1199.9px) { @content };    //1800
+    }
+    @if $breakpoint == minWidth1200 {
+        @media only screen and (min-width: 1200px) { @content };    //1800
+    }
+}
+
+@mixin vector($width: 630px, $height: 624px){
+    content: "";
+    background-image: url(../../images/vector-icon-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $width;
+    height: $height;
+    position: absolute;
+}
+
+@mixin globalBtnOne{
+    background: $color-button;
+    color: $color-white;
+    text-transform: capitalize;
+    padding: 6px 16px;
+    display: inline-block;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}

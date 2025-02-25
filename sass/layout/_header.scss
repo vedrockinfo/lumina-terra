@@ -1,0 +1,86 @@
+header {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &.fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        animation: slidetop;
+        background: $color-white;
+        animation-duration: 0.6s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left-side{
+        .logo{
+            width: 15rem;
+        }
+    }
+    .right-side {
+        button {
+            position: relative;
+            float: right;
+           
+            margin-top: 8px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            @include respond (minWidth768){
+                display: none;
+            }
+            .icon-bar {
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                background: $color-primary;
+                & +.icon-bar {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    .nav-list{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 0;
+        @include respond (maxWidth768){
+            display: none;
+        }
+        .nav-item{
+            list-style: none;
+            a{
+                text-decoration: none;
+                font-weight: 500;
+                text-transform: capitalize;
+                display: inline-block;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            .nav-link{
+                color: $color-text;
+                padding: 5px 10px;
+                
+            }
+            .nav-button{
+                color: $color-white;
+                background: $color-primary;
+                padding: 8px 16px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
