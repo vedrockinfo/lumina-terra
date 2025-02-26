@@ -4,14 +4,35 @@
     .sustaible-grid {
         display: grid;
         grid-template-columns: 53% 45%;
+        @include respond (maxWidth768){
+            grid-template-columns: auto;
+        }
     }
 
     .img-wrapper {
         width: 50rem;
         height: 50rem;
-        margin: 2rem 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         border-radius: 100%;
-        transform: translateX(28%);
+        @include respond (maxWidth575){
+            width: auto;
+            height: auto;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            img{
+                border-radius: 1rem!important;
+            }
+        }
+        @include respond (maxWidth768){
+            margin-left: auto;
+            margin-right: auto;
+            outline: none;
+            border: 2rem solid $color-tertiary;
+        }
+        @include respond (minWidth768){
+            transform: translateX(28%);
+        }
         outline: 6rem solid $color-tertiary;
 
         img {
@@ -19,6 +40,112 @@
             width: 100%;
             height: 100%;
             object-position: 68% 100%;
+        }
+    }
+}
+.signature-strength{
+    background: $color-tertiary;
+    .signature-grid{
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .signature-grid-item{
+            &:nth-child(4), &:nth-child(5){
+                position: relative;
+        &::before{
+            @include vector(84.2px, 84px);
+            mix-blend-mode: plus-lighter;
+            top: -9%;
+    right: -17%;
+    @include respond (maxWidth768){
+        right: 0;
+    transform: scale(0.5);
+    }
+        }
+            }
+            .card-strenth{
+                .img-wrapper{
+                    width: 100%;
+                    aspect-ratio: 1;
+                    margin: auto;
+                    padding: 3rem;
+                    background: $color-white;
+                    border-radius: 100%;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: inherit;
+                    }
+                    &::before{
+                        content: "";
+                        background: rgba($color-black, 0.3);
+                        position: absolute;
+                        top: 50%;
+    left: 50%;
+    width: calc(100% - 6rem);
+    height: calc(100% - 6rem);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.4s;
+                    }
+                    &:hover{
+                        &::before{
+                            opacity: 1;
+                        }
+                        .wrapperText{
+                            transform: translate(-50%, -50%);
+                            opacity: 1;
+                        }
+                    }
+                }
+                .wrapperText{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    color: $color-white;
+                    font-weight: bold;
+                    text-align: center;
+                    opacity: 0;
+                    transition: all 0.4s;
+                }
+                .heading-tertiary{
+                    padding: 1rem;
+                    border-top: 1px solid rgba($color-text, 0.3);
+                    border-bottom: 1px solid rgba($color-text, 0.3);   
+                }
+            }
+        }
+    }
+}
+.educational-visioners{
+    .educational-grid{
+        display: grid;
+        gap: 6rem;
+        grid-template-columns: repeat(4, 1fr);
+        @include respond (maxWidth992){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond (maxWidth575){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .img-wrapper{
+            width: 100%;
+    aspect-ratio: 1;
+            border-radius: 100%;
+            overflow: hidden;
+            border: 5px solid $color-tertiary;
+            margin: auto;
+            img{
+                width: 100%;
+                height: 100%;
+                object-position: top;
+            }
         }
     }
 }

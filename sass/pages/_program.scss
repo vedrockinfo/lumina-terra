@@ -1,0 +1,211 @@
+.curriculum-activities{
+    background: $color-tertiary;
+    .col-md-3{
+        &:not(:last-child){
+            .card{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    .card{
+        background: $color-white;
+        padding: 15px;
+        height: 100%;
+        .img-wrapper{
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 1;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                background: $color-tertiary;
+            }
+        }
+        .card-content{
+            text-align: center;
+            h4{
+                margin-bottom: 0.7rem;
+            }
+        }
+    }
+}
+.what-we-do{
+    h2{
+        margin: 4rem 0;
+
+    }
+}
+.our-facilities{
+    @media screen and (min-width:900px) {
+       background-image: linear-gradient(90deg, $color-tertiary 80%, $color-white 20%);
+    }
+}
+.our-facilities #awesome_tab{
+   display: grid;
+   grid-template-columns: 35% 65%;
+   @media screen and (max-width:900px) {
+       display: block;
+   }
+}
+
+.our-facilities #awesome_tab .tab_header{
+  @media screen and (min-width:900px) {
+   position: sticky;
+   top: 80px;
+   height: max-content;
+  }
+}
+
+.our-facilities #awesome_tab .tab_header .item {
+   border-bottom: 0.5px solid $color-white;
+   padding: 15px 10px 15px 40px;
+   border-radius: 4rem 0 0 4rem;
+   cursor: pointer;
+   display: block;
+   color: $color-text;
+   width: 100%;
+   transition: all 0.5s ease;
+}
+
+
+
+.our-facilities #awesome_tab .tab_header .item.active {
+   background:$color-white;
+   color:$color-text;
+}
+
+.our-facilities #awesome_tab .tab_header:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.our-facilities #awesome_tab .tab_container{
+    background: $color-white;
+}
+
+.our-facilities #awesome_tab .tab_container .container_item {
+   padding: 0 20px 20px 4rem;
+   display:none;
+}
+
+.our-facilities #awesome_tab .tab_container .container_item ol{
+    @include respond (minWidth992){
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    }
+}
+
+.our-facilities #awesome_tab .tab_container .container_item ol, 
+.our-facilities #awesome_tab .tab_container .container_item ul{
+   list-style: none;
+   padding-left: 0;
+   margin-bottom: 0;
+}
+.our-facilities #awesome_tab .tab_container .container_item ol li:not(:last-child){
+   padding-bottom: 10px;
+}
+
+.our-facilities #awesome_tab .tab_container .container_item .img-wrapper {
+   overflow: hidden;
+   height: 200px;
+   margin-bottom: 30px;
+}
+.our-facilities #awesome_tab .tab_container .container_item .img-wrapper img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+   object-position: 100% 91%;
+}
+.our-facilities #awesome_tab .tab_container .container_item.active {
+   display:block;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+ }
+ 
+ .modal-content {
+   background-color: white;
+   padding: 20px;
+   border-radius: 8px;
+   width: 400px;
+   text-align: center;
+   position: relative;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .close {
+   position: absolute;
+   top: 10px;
+   right: 15px;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+ }
+ .curriculum{
+   .img-wrapper{
+       height: 33rem;
+       position: relative;
+       &::before{
+           content: "";
+           background-image: linear-gradient(0deg, #000000, transparent);
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+       }
+       img{
+           height: 100%;
+           width: 100%;
+       }
+       .content{
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           padding: 0.5rem 1rem 1rem 2rem;
+           display: inline-block;
+           border-top: 4px solid $color-white;
+           h4{
+               color: $color-white;
+               font-weight: normal;
+               text-transform: uppercase;
+               font-size: 30px;
+               line-height: 1.5;
+               margin-bottom: 0;
+           }
+           span{
+               color: $color-white;
+           }
+       }
+
+   }
+ }
+ .container.lumina-hub {
+    padding: 5rem;
+    text-align: center;
+    .link-wrapper{
+        text-align: center;
+        padding-top: 5rem;
+        a{
+            @include globalBtnTwo();
+        }
+
+    }
+    @include respond (maxWidth768){
+        padding: 3rem 0;
+    }
+}

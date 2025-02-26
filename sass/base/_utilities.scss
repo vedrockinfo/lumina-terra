@@ -1,31 +1,43 @@
 .p-top{
     padding-top: 7rem;
 
-    @include respond(tab-port) {
-        padding-top: 7rem;
+    @include respond(maxWidth992) {
+        padding-top: 5rem;
+    }
+    @include respond(maxWidth575) {
+        padding-top: 4rem;
     }
 }
 
 .p-bottom{
     padding-bottom: 7rem;
 
-    @include respond(tab-port) {
-        padding-bottom: 7rem;
+    @include respond(maxWidth992) {
+        padding-bottom: 5rem;
+    }
+    @include respond(maxWidth575) {
+        padding-bottom: 4rem;
     }
 }
 .m-top{
     margin-top: 7rem;
 
-    @include respond(tab-port) {
-        margin-top: 7rem;
+    @include respond(maxWidth992) {
+        margin-top: 5rem;
+    }
+    @include respond(maxWidth575) {
+        margin-top: 4rem;
     }
 }
 
 .m-bottom{
     margin-bottom: 7rem;
 
-    @include respond(tab-port) {
-        margin-bottom: 7rem;
+    @include respond(maxWidth992) {
+        margin-bottom: 5rem;
+    }
+    @include respond(maxWidth575) {
+        margin-bottom: 4rem;
     }
 }
 .owl-nav {
@@ -45,4 +57,52 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
+}
+.border-bottom{
+    height: 5px;
+    width: 100%;
+    display: block;
+    background: $color-primary;
+    margin-bottom: 3rem;
+}
+.border-one{
+    width: 100%;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.inner-hero-section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 45rem;
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    background-position-x: center;
+    &::before{
+        content: "";
+        background-image: linear-gradient(0deg, white 70%, transparent);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 22%;
+    }
+    h1{
+        text-transform: capitalize;
+        font-size: 4.8rem;
+        position: relative;
+    }
+    &.register{
+        &::before{
+            background-image: none;
+            background-color: $color-black;
+            height: 100%;
+            opacity: 0.6;
+        }
+        h1{
+            color: $color-white;
+        }
+    }
 }

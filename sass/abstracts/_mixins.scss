@@ -24,12 +24,15 @@
 
 @mixin vector($width: 630px, $height: 624px){
     content: "";
-    background-image: url(../../images/vector-icon-01.png);
+    background-image: url(../images/vector-icon-01.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: $width;
     height: $height;
     position: absolute;
+    @include respond (maxWidth768){
+        transform: scale(0.5);
+    }
 }
 
 @mixin globalBtnOne{
@@ -41,5 +44,14 @@
     text-decoration: none;
     &:hover{
         text-decoration: none;
+    }
+}
+
+@mixin globalBtnTwo{
+    @include globalBtnOne;
+    border-radius: 10rem;
+    width: 20rem;
+    @include respond (maxWidth575){
+        width: auto;
     }
 }

@@ -1,9 +1,16 @@
+.home-page {
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        width: 100%;
+    }
+}
+
 header {
     padding: 10px 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+
     &.fixed-header {
         position: fixed;
         top: 0;
@@ -13,73 +20,139 @@ header {
         animation: slidetop;
         background: $color-white;
         animation-duration: 0.6s;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+
     nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .left-side{
-        .logo{
+
+    .left-side {
+        .logo {
             width: 15rem;
         }
     }
+
     .right-side {
         button {
             position: relative;
             float: right;
-           
+
             margin-top: 8px;
             margin-bottom: 8px;
             background-color: transparent;
             background-image: none;
             border: 1px solid transparent;
             border-radius: 4px;
-            @include respond (minWidth768){
+
+            @include respond (minWidth768) {
                 display: none;
             }
+
             .icon-bar {
                 display: block;
                 width: 22px;
                 height: 2px;
                 border-radius: 1px;
                 background: $color-primary;
-                & +.icon-bar {
+
+                &+.icon-bar {
                     margin-top: 4px;
                 }
             }
         }
     }
-    .nav-list{
+
+    .nav-list {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 0;
-        @include respond (maxWidth768){
-            display: none;
+
+        @include respond (minWidth768) {
+            .mobile-logo {
+                display: none;
+            }
         }
-        .nav-item{
+
+        @include respond (maxWidth768) {
+            .mobile-logo {
+                width: 15rem;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba($color-tertiary, $alpha: 0.7);
+                margin-bottom: 2rem;
+            }
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background: #fff;
+            height: 100vh;
+            width: 25rem;
+            transform: translateX(-100%);
+            padding: 20px 10px;
+            z-index: 9;
+            transition:all 0.4s;
+
+            &.active {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .nav-item {
             list-style: none;
-            a{
+
+            @include respond (maxWidth768) {
+                display: block;
+                width: 100%;
+
+                a {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    width: 100%;
+                }
+
+                &:not(:nth-last-of-type(2)) {
+                    a {
+                        border-bottom: 1px solid rgba($color-tertiary, $alpha: 0.7);
+                    }
+                }
+            }
+
+            a {
                 text-decoration: none;
                 font-weight: 500;
                 text-transform: capitalize;
                 display: inline-block;
-                &:hover{
+
+                &:hover {
                     text-decoration: none;
                 }
             }
-            .nav-link{
+
+            .nav-link {
                 color: $color-text;
                 padding: 5px 10px;
-                
+
             }
-            .nav-button{
+
+            .nav-button {
                 color: $color-white;
                 background: $color-primary;
                 padding: 8px 16px;
                 margin-left: 10px;
+
+                @include respond (maxWidth768) {
+                    width: auto;
+                    margin-top: 2rem;
+                    border-radius: 5rem;
+                }
             }
         }
     }
