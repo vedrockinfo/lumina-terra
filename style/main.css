@@ -1065,6 +1065,10 @@ header .nav-list .nav-item .nav-button:hover {
   border-top: 1px solid rgba(34, 31, 32, 0.3);
   border-bottom: 1px solid rgba(34, 31, 32, 0.3);
 }
+.signature-strength .signature-grid .signature-grid-item .card-strenth .content-para {
+  text-align: center;
+  padding: 0 1.5rem;
+}
 
 .educational-visioners .educational-grid {
   display: grid;
