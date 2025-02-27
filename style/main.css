@@ -254,6 +254,19 @@ h6 {
   color: #fff;
 }
 
+input[type=number]:hover::-webkit-inner-spin-button,
+input[type=number]:hover::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
+}
+
+input:-webkit-autofill {
+  background-color: white !important;
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
 .hero-section {
   padding-top: 10rem;
   background-image: url(../images/main-bg-01.jpg);
@@ -500,6 +513,191 @@ h6 {
   }
 }
 
+.registration-form textarea {
+  resize: none;
+}
+.registration-form .basic-info {
+  background: #c5e8fb;
+}
+.registration-form .basic-info .heading-tertiary {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .registration-form .basic-info .heading-tertiary {
+    font-size: 3rem;
+  }
+}
+.registration-form .basic-info .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  /* Change color to black when user selects a date */
+  /* Ensure placeholder-like behavior */
+}
+@media only screen and (max-width: 575px) {
+  .registration-form .basic-info .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.registration-form .basic-info .form-grid:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.registration-form .basic-info .form-grid .full-grid {
+  grid-column: span 2;
+}
+@media only screen and (max-width: 575px) {
+  .registration-form .basic-info .form-grid .full-grid {
+    grid-column: unset;
+  }
+}
+.registration-form .basic-info .form-grid .form-control {
+  color: #221f20;
+}
+.registration-form .basic-info .form-grid .form-control:not(textarea.form-control) {
+  padding: 15px;
+  height: 59.33px;
+}
+@media only screen and (max-width: 575px) {
+  .registration-form .basic-info .form-grid .form-control:not(textarea.form-control) {
+    height: 40px;
+    padding: 6px 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .registration-form .basic-info .form-grid .form-control {
+    font-size: 1.8rem;
+  }
+}
+.registration-form .basic-info .form-grid .form-control::-webkit-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid .form-control::-moz-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid .form-control:-ms-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid .form-control::-ms-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid .form-control::placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid input[type=date] {
+  color: #d0d2d4; /* Gray text */
+  appearance: none; /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-transform: uppercase;
+}
+.registration-form .basic-info .form-grid input[type=date].has-value {
+  color: black;
+}
+.registration-form .basic-info .form-grid input[type=date]::-webkit-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid input[type=date]::-moz-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid input[type=date]:-ms-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid input[type=date]::-ms-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .basic-info .form-grid input[type=date]::placeholder {
+  color: #d0d2d4;
+}
+.registration-form .additional-info .heading-primary {
+  text-align: center;
+}
+.registration-form .additional-info input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.registration-form .additional-info input[type=radio] + label {
+  position: relative;
+}
+.registration-form .additional-info input[type=radio] + label::before {
+  content: "";
+  background: transparent;
+  outline: 5px solid #c5e8fb;
+  border: 3px solid #fff;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 5.5px;
+}
+.registration-form .additional-info input[type=radio]:checked + label::before {
+  background: #c5e8fb !important;
+}
+.registration-form .additional-info .radio-area {
+  position: relative;
+}
+.registration-form .additional-info label {
+  font-weight: normal;
+  padding-left: 4rem;
+}
+.registration-form .additional-info .radio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0rem;
+}
+@media only screen and (max-width: 575px) {
+  .registration-form .additional-info .radio-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.registration-form .additional-info .form-wrapper {
+  margin-bottom: 3rem;
+}
+.registration-form .additional-info textarea {
+  color: #221f20;
+  font-size: 1.8rem;
+}
+.registration-form .additional-info textarea::-webkit-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .additional-info textarea::-moz-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .additional-info textarea:-ms-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .additional-info textarea::-ms-input-placeholder {
+  color: #d0d2d4;
+}
+.registration-form .additional-info textarea::placeholder {
+  color: #d0d2d4;
+}
+
+.submit-btn {
+  background: #28aae4;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 6px 16px;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 3px;
+  width: 20rem;
+  border: none;
+}
+.submit-btn:hover {
+  text-decoration: none;
+  background: #41c5dc;
+}
+@media only screen and (max-width: 575px) {
+  .submit-btn {
+    width: auto;
+  }
+}
+
 .welcome-area {
   background: #c5e8fb;
 }
@@ -542,9 +740,12 @@ h6 {
   padding: 6px 16px;
   display: inline-block;
   text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .welcome-area .content-wrapper .globalbtn-one:hover {
   text-decoration: none;
+  background: #41c5dc;
 }
 
 .home-page header {
@@ -697,9 +898,15 @@ header .nav-list .nav-item .nav-link {
 }
 header .nav-list .nav-item .nav-button {
   color: #fff;
-  background: #41c5dc;
-  padding: 8px 16px;
+  background: #28aae4;
+  padding: 6px 16px;
   margin-left: 10px;
+  border-radius: 3px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .nav-list .nav-item .nav-button:hover {
+  background: #41c5dc;
 }
 @media only screen and (max-width: 767.9px) {
   header .nav-list .nav-item .nav-button {
@@ -887,6 +1094,39 @@ header .nav-list .nav-item .nav-button {
   height: 100%;
   -o-object-position: top;
      object-position: top;
+}
+
+.globalbtn-three {
+  background: #28aae4;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 6px 25px 6px 16px;
+  display: inline-block;
+  margin-top: 5rem;
+  text-decoration: none;
+  border-radius: 3px;
+  position: relative;
+  display: none;
+}
+.globalbtn-three::after {
+  content: "";
+  background-image: url(../images/btn-bg.png);
+  position: absolute;
+  right: -10px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(51, 51, 51, 0.5176470588));
+          filter: drop-shadow(0px 0px 3px rgba(51, 51, 51, 0.5176470588));
+}
+.globalbtn-three:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 .what-lumina {
@@ -1154,11 +1394,14 @@ header .nav-list .nav-item .nav-button {
   padding: 6px 16px;
   display: inline-block;
   text-decoration: none;
-  border-radius: 10rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 3px;
   width: 20rem;
 }
 .our-beliefs .link-wrapper a:hover {
   text-decoration: none;
+  background: #41c5dc;
 }
 @media only screen and (max-width: 575px) {
   .our-beliefs .link-wrapper a {
@@ -1633,11 +1876,14 @@ header .nav-list .nav-item .nav-button {
   padding: 6px 16px;
   display: inline-block;
   text-decoration: none;
-  border-radius: 10rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 3px;
   width: 20rem;
 }
 .container.lumina-hub .link-wrapper a:hover {
   text-decoration: none;
+  background: #41c5dc;
 }
 @media only screen and (max-width: 575px) {
   .container.lumina-hub .link-wrapper a {

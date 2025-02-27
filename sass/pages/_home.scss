@@ -149,3 +149,7 @@
         }
     }
 }
+.globalbtn-three{
+    @include globalBtnTHree;
+    display: none;
+}

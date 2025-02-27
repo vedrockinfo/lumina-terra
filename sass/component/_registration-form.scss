@@ -1,0 +1,150 @@
+.registration-form {
+    textarea{
+        resize: none;
+    }
+    .basic-info {
+        background: $color-tertiary;
+
+        .heading-tertiary {
+            text-align: left;
+            margin-bottom: 2rem;
+            @include respond (minWidth768){
+                font-size: 3rem;
+            }
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            @include respond (maxWidth575){
+                grid-template-columns: repeat(1, 1fr);
+            }
+ 
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+
+            .full-grid {
+                grid-column: span 2;
+                @include respond (maxWidth575){
+                    grid-column: unset;
+                }
+            }
+
+            .half-grid {}
+
+
+
+            .form-control {
+                &:not(textarea.form-control) {
+                    padding: 15px;
+                    height: 59.33px;
+                    @include respond (maxWidth575){
+                        height: 40px;
+                        padding: 6px 12px;
+                    }
+                }
+
+                color: $color-text;
+                @include respond (minWidth768){
+                    font-size: 1.8rem;
+                }  
+
+                &::placeholder {
+                    color: #d0d2d4;
+                }
+            }
+
+            input[type="date"] {
+                color: #d0d2d4; /* Gray text */
+                appearance: none; /* Remove default browser styles */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-transform: uppercase;
+            }
+    
+            /* Change color to black when user selects a date */
+            input[type="date"].has-value {
+                color: black;
+            }
+            
+            /* Ensure placeholder-like behavior */
+            input[type="date"]::placeholder {
+                color: #d0d2d4;
+            }
+        }
+    }
+
+    .additional-info {
+        .heading-primary {
+            text-align: center;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+
+            &+label{
+                position: relative;
+
+            &::before {
+                content: "";
+                background: transparent;
+                outline: 5px solid $color-tertiary;
+                border: 3px solid $color-white;
+                width: 2.1rem;
+                height: 2.1rem;
+                border-radius: 100%;
+                position: absolute;
+                left: 0;
+                top: 5.5px;
+            }
+            }
+
+            &:checked {
+                &+label {
+                    &::before {
+                        background: $color-tertiary !important;
+                    }
+                }
+            }
+        }
+
+        .radio-area {
+            position: relative;
+        }
+
+        label {
+            font-weight: normal;
+            padding-left: 4rem;
+        }
+
+        .radio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0rem;
+            @include respond (maxWidth575){
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .form-wrapper {
+            margin-bottom: 3rem;
+        }
+
+        textarea {
+            color: $color-text;
+            font-size: 1.8rem;
+            &::placeholder{
+                color: #d0d2d4;
+            }
+        }
+    }
+}
+
+.submit-btn{
+    @include submitbutton();
+    border: none;
+}

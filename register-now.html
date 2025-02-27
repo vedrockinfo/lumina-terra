@@ -44,39 +44,39 @@
         <section class="inner-hero-section register" style="background-image: url(./images/register-bg-01.jpg);">
             <h1>register now</h1>
         </section>
-        <form action="" class="registration-form">
+        <form action="" class="registration-form m-bottom">
             <div class="basic-info p-top p-bottom">
                 <div class="container">
-                    <h4 class="heading-tertiary">Child's Information</h4>
+                    <h4 class="heading-tertiary" style="margin-top: 0;">Child's Information</h4>
                     <div class="form-grid">
                         <div class="full-grid">
                             <input type="text" name="Full Name" class="form-control"
                                 placeholder="Full Name of the Child" required>
                         </div>
                         <div class="half-grid">
-                            <input type="date" name="DOB" class="form-control" placeholder="MM/DD/YYYY">
+                            <input type="date" name="DOB" id="dob" class="form-control" placeholder="MM/DD/YYYY" required>
                         </div>
                         <div class="half-grid">
-                            <input type="number" name="age" class="form-control" placeholder="Age">
+                            <input type="number" name="age" id="age" class="form-control" placeholder="Age" required>
                         </div>
                         <div class="full-grid">
-                            <input type="text" name="" class="form-control" placeholder="Grade Applying For">
+                            <input type="text" name="" class="form-control" placeholder="Grade Applying For" required>
                         </div>
                     </div>
                     <h4 class="heading-tertiary">Parent/Guardian Information</h4>
                     <div class="form-grid">
                         <div class="half-grid"><input type="text" name="First Name" class="form-control"
-                                placeholder="First Name"></div>
+                                placeholder="First Name" required></div>
                         <div class="half-grid"><input type="text" name="Last Name" class="form-control"
-                                placeholder="Last Name"></div>
+                                placeholder="Last Name" required></div>
                         <div class="half-grid"><input type="text" name="Relationship" class="form-control"
-                                placeholder="Relationship to the child"></div>
+                                placeholder="Relationship to the child" required></div>
                         <div class="half-grid"><input type="text" name="Occupation" class="form-control"
-                                placeholder="Occupation"></div>
+                                placeholder="Occupation" required></div>
                         <div class="half-grid"><input type="number" name="Contact" class="form-control"
-                                placeholder="Contact Number"></div>
+                                placeholder="Contact Number" required></div>
                         <div class="half-grid"><input type="email" name="email" class="form-control"
-                                placeholder="Email Address"></div>
+                                placeholder="Email Address" required></div>
                     </div>
                     <h4 class="heading-tertiary">Current School Information (if applicable)</h4>
                     <div class="form-grid">
@@ -200,6 +200,9 @@
                         </div>
                      </div>
                 </div>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="submit-btn">submit</button>
             </div>
         </form>
     </main>

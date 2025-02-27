@@ -61,10 +61,31 @@ $(document).ready(function() {
         $('#myModal').fadeOut();
       });
     
-      // Close modal when clicking outside the content
+      
       $(window).on('click', function (e) {
         if ($(e.target).is('#myModal')) {
           $('#myModal').fadeOut();
         }
       });
+    });
+
+
+    document.getElementById("dob").addEventListener("change", function () {
+        let dob = new Date(this.value);
+        let today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        let monthDiff = today.getMonth() - dob.getMonth();
+
+        if(monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())){
+            age--;
+        }
+        document.getElementById("age").value = age;
+    })
+
+    document.getElementById("dob").addEventListener("input", function() {
+        if (this.value) {
+            this.classList.add("has-value"); 
+        } else {
+            this.classList.remove("has-value");
+        }
     });
