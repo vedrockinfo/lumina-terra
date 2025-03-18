@@ -72,17 +72,16 @@
 }
 
 .inner-hero-section{
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 45rem;
-    display: grid;
-    justify-content: center;
-    align-items: flex-end;
     position: relative;
-    background-position-x: center;
+    img{
+        height: calc(100vh - 70px);
+        width: 100%;
+        object-position: bottom;
+        object-fit: cover;
+    }
     &::before{
         content: "";
-        background-image: linear-gradient(0deg, white 70%, transparent);
+        background-image: linear-gradient(0deg, white 10%, transparent);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -92,7 +91,12 @@
     h1{
         text-transform: capitalize;
         font-size: 4.8rem;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        line-height: 1;
+        margin-bottom: 0;
     }
     &.register{
         &::before{
@@ -117,4 +121,27 @@ input:-webkit-autofill {
     background-color: white !important;
     -webkit-box-shadow: 0 0 0 50px white inset !important;
     -webkit-text-fill-color: #000 !important;
+}
+.primary-list{
+    li{
+        position: relative;
+        &::before{
+            content: "";
+            background: $color-text;
+            position: absolute;
+            left: -2rem;
+            top: 15px;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+        }
+        &:not(:last-child){
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.modal-backdrop {
+    z-index: 9;
 }

@@ -62,7 +62,10 @@
             .img-wrapper {
                 @include respond (minWidth768) {
                     width: 100%;
-                }
+                    @include respond (maxWidth992)
+{
+    height: 100%;
+}                }
 
                 @include respond (maxWidth768) {
                     width: 37.5rem;
@@ -156,6 +159,10 @@
             .img-wrapper {
                 @include respond (minWidth768) {
                     width: 100%;
+                    @include respond (maxWidth992)
+                    {
+                        height: 100%;
+                    }  
                 }
 
                 @include respond (maxWidth768) {

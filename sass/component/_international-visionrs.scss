@@ -1,0 +1,113 @@
+.international-page {
+    background-image: url(../images/main-bg-01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+    .banner-top {
+        position: relative;
+
+        &::before {
+            @include vector(69.4px, 70.32px);
+            left: 50px;
+            top: 50px;
+            transform: translate(0, -100%);
+            @include respond (maxWidth1200) {
+                @include vector(80.4px, 79.32px);
+                left: 10px;
+                top: 0;
+            }
+            @include respond (maxWidth992){
+                left: 30px;
+            }
+            @include respond (maxWidth768){
+                display: none;
+            }
+        }
+
+        &::after {
+            @include vector(69.4px, 70.32px);
+            right: 20px;
+            bottom: -30px;
+            @include respond (maxWidth1200) {
+                @include vector(92.4px, 87.32px);
+                right: 40px;
+bottom: -50px;
+            }
+            @include respond (maxWidth768){
+                display: none;
+            }
+        }
+    }
+
+    .banner-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        text-align: right;
+        border: 1rem solid $color-primary;
+        margin-left: auto;
+        border-radius: 100%;
+        position: relative;
+        .boundless-future{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20rem;
+            height: auto;
+            border-radius: 0;
+        }
+        @include respond (maxWidth1200){
+            width: 40rem;
+            height: 40rem;
+        }
+        @include respond (maxWidth768){
+            margin-right: auto;
+        }
+        @include respond (maxWidth575){
+            width: 28rem;
+            height: 28rem;
+        }
+
+        &::after {
+            transform: scale(0.5);
+    filter: brightness(41.5);
+            @include vector(113.4px, 112.32px);
+            right: 20px;
+    top: 40px;
+            @include respond (maxWidth1200){
+                right: -45px;
+                top: 12px;
+            }
+            @include respond (maxWidth575){
+                @include vector(50.4px, 48.32px);
+            right: 0;
+            top: 9px;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            padding: 1rem;
+            object-position: top;
+        }
+    }
+
+    h4.sub-heading{
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $color-white;
+        text-align: center;
+        margin-bottom: 2rem;
+        background-color: $color-primary;
+        padding: 1rem;
+        display: inline-block;
+        @include respond (maxWidth768){
+            font-size: 2rem;
+        }
+    }
+}
