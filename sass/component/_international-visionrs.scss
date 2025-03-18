@@ -110,4 +110,16 @@ bottom: -50px;
             font-size: 2rem;
         }
     }
+    .content-para{
+        overflow: auto;
+        @media screen and (min-width:991.9px) {
+            max-height: 300px;
+        }
+        @media screen and (min-width:1199.9px) {
+            max-height: 370px;
+        }
+        @media screen and (min-width:1399.9px) {
+            max-height: 370px;
+        }
+    }
 }
