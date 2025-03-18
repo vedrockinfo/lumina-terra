@@ -79,6 +79,23 @@
     }
 }
 
+@mixin globalBtnThree{
+    background: transparent;
+    color: $color-button;
+    border: 1px solid $color-button;
+    text-transform: capitalize;
+    padding: 6px 16px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.4s;
+    &:hover{
+        text-decoration: none;
+        background: $color-button;
+        color: $color-white;
+        border: 1px solid $color-button;
+    }
+}
+
 @mixin globalBtnTwo{
     @include globalBtnOne;
     border-radius: 3px;

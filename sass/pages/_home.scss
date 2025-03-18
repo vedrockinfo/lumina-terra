@@ -242,18 +242,58 @@ top: 0;
     }
     .educational-grid {
         display: grid;
-        gap: 6rem;
-        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        .educational-grid-item {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            padding: 3rem;
+            background: #ffffff;
+            border-radius: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content: "";
+                background: $color-button;
+                position: absolute;
+                width: 0;
+                height: 3px;
+                bottom: 0;
+                transition: all 0.3s;
+                left: 0;
+            }
+            &:hover{
+                border-radius: 1rem 1rem 0 0;
+                transform: translateY(-3px);
+                background: lighten(#f7f7f7, $amount: 2);
+                .heading-tertiary{
+                    color: $color-button;
+                cursor: pointer;
+                }
+                &::after{
+                    width: 100%;
+                }
+            }
+            .content-para{
+                text-align: center;
+                border-top: 1px solid rgba($color-text, 0.1);
+                padding-top: 1rem;
+            }
+            .text-center {
+                margin-top: 2rem;
+                a{
+                    @include globalBtnThree;
+                }
+            }
+        }
 
         .heading-tertiary{
             transition: all 0.3s;
+            padding-bottom: 1rem;
             a{
                 color: inherit;
                 text-decoration: none;
-            }
-            &:hover{
-                color: $color-button;
-                cursor: pointer;
             }
         }
 
@@ -266,7 +306,7 @@ top: 0;
         }
 
         .img-wrapper {
-            width: 100%;
+            width: 21rem;
             aspect-ratio: 1;
             border-radius: 100%;
             overflow: hidden;
