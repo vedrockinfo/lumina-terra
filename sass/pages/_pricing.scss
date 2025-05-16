@@ -1,67 +1,98 @@
-.why-lumina{
-    h2{
+.why-lumina {
+    background: $color-quaternary;
+
+    h2 {
         position: relative;
-        &::after{
+
+        &::after {
             @include vector(81px, 80px);
             right: 0;
             bottom: -1rem;
             // mix-blend-mode: color-dodge;
         }
     }
-    .img-wrapper{
+
+    .img-wrapper {
         overflow: hidden;
-        @include respond (maxWidth768){
+
+        @include respond (maxWidth768) {
             margin-top: 2rem;
         }
-        img{
-            @include respond (maxWidth575){
+
+        img {
+            @include respond (maxWidth575) {
                 width: 100%;
                 aspect-ratio: 1;
                 object-position: bottom;
             }
-            @include respond (minWidth1200){
+
+            @include respond (minWidth1200) {
                 height: 32rem;
-    width: 100%;
-    object-position: bottom;
+                width: 100%;
+                object-position: bottom;
             }
         }
     }
 }
-.mission-vision{
-// @include respond (minWidth768){
-//     background: linear-gradient(90deg, $color-grey 20%, $color-white 20%, $color-white 80%, $color-grey 80%);
-// }
-background: $color-tertiary;
-.mission-grid{
+
+.mission-vision {
+    // @include respond (minWidth768){
+    //     background: linear-gradient(90deg, $color-grey 20%, $color-white 20%, $color-white 80%, $color-grey 80%);
+    // }
+    background: $color-secondary;
+
+    .mission-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
-        h2{
+
+        h2 {
             margin-top: 0;
         }
-        @include respond (maxWidth768){
+
+        @include respond (maxWidth768) {
             grid-template-columns: repeat(1, 1fr);
         }
-        p{
+
+        p {
             margin-bottom: 0;
         }
-        .mission-item{
+
+        .mission-item {
+
+            @include respond (minWidth768){
+                h2{
+                    position: relative;
+                    margin-bottom: 30px;
+                    &::before{
+                        width: 100%;
+                        content: "";
+                        height: 5px;
+                        background: $color-white;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
+                    }
+                }
+            }
+
             // background: $color-grey;
             // border: 2px solid $color-tertiary;
             // @include respond (maxWidth768){
             //     padding: 2rem;
             // }
-            @include respond (minWidth768){
+            @include respond (minWidth768) {
                 padding: 7rem 4rem 7rem 0;
                 border-radius: 0 50% 50% 0;
                 border-left: none;
                 position: relative;
                 overflow: hidden;
-                &::before{
+
+                &::before {
                     content: "";
                     background: transparent;
                     outline: 2px solid $color-tertiary;
-                    outline-offset: -2px; 
+                    outline-offset: -2px;
                     clip-path: inset(0 2px 0 0);
                     position: absolute;
                     top: 0;
@@ -72,27 +103,44 @@ background: $color-tertiary;
                 }
             }
         }
-        .vision-item{
+
+        .vision-item {
+
             // background: $color-grey;
             // border: 2px solid $color-tertiary;
             // @include respond (maxWidth768){
             //     padding: 2rem;
             // }
-            h2{
+            h2 {
                 margin-top: 0;
             }
-            @include respond (minWidth768){
+
+            @include respond (minWidth768) {
+                h2{
+                    position: relative;
+                    margin-bottom: 30px;
+                    &::before{
+                        width: 100%;
+                        content: "";
+                        height: 5px;
+                        background: $color-white;
+                        position: absolute;
+                        bottom: -15px;
+                        right: 0;
+                    }
+                }
                 text-align: right;
                 padding: 7rem 0 7rem 4rem;
                 border-radius: 50% 0 0 50%;
                 border-right: none;
                 position: relative;
                 overflow: hidden;
-                &::before{
+
+                &::before {
                     content: "";
                     background: transparent;
                     outline: 2px solid $color-tertiary;
-                    outline-offset: -2px; 
+                    outline-offset: -2px;
                     clip-path: inset(0 0 0 2px);
                     position: absolute;
                     top: 0;
@@ -101,68 +149,132 @@ background: $color-tertiary;
                     height: 100%;
                     transform: scale(1.01);
                 }
-                h2{
+
+                h2 {
                     text-align: right;
                 }
             }
         }
     }
 }
-.education-goal{
-    // background: $color-tertiary;
-    h2{
+
+.education-goal {
+    background: $color-quaternary;
+    .globalbtn-one{
+        background: transparent;
+    color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    text-transform: capitalize;
+    padding: 6px 16px;
+    display: inline-block;
+    text-decoration: none;
+    transition: .4s;
+    display: inline-block;
+    margin-top: 3rem;
+    &:hover{
+        background: $color-tertiary;
+        color: $color-white;
+    }
+    }
+
+
+    h2 {
         position: relative;
-        &::after{
+
+        &::after {
             @include vector(85px, 84px);
             top: -5rem;
-            // mix-blend-mode: color-dodge;
+            filter: invert(1) brightness(100);
             transform: scale(0.75);
         }
     }
-    .what-lumnia-grid{
-        @include respond (minWidth768){
+
+    .what-lumnia-grid {
+        @include respond (minWidth768) {
             display: grid;
-        grid-template-columns: 67% 30%;
+            grid-template-columns: 67% 30%;
         }
+
         align-items: center;
         position: relative;
-        .what-lumnia-grid-item{
+
+        .what-lumnia-grid-item {
             width: 100%;
             height: 100%;
             background: $color-white;
-            &:last-child{
-                @include respond (maxWidth768){
+            position: relative;
+
+            &:first-child {
+                &::before {
+                    content: "";
+                    background: $color-white;
+                    position: absolute;
+                    top: 0;
+                    left: -99.99%;
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+
+            &:last-child {
+                @include respond (maxWidth768) {
                     background: transparent;
                     margin-top: 2rem;
                 }
+
                 border-radius: 0 100% 100% 0;
             }
-            .content-para{
+
+            .content-para {
                 padding: 3rem 10rem 3rem 0;
-                @include respond (maxWidth768){
+
+                @include respond (maxWidth768) {
                     padding: 3rem;
                 }
             }
-            .img-wrapper{
-                @include respond (minWidth768){
+
+            .img-wrapper {
+                @include respond (minWidth768) {
                     width: 100%;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: #fff;
+                        width: 100%;
+                        height: 100%;
+                        outline: 12px solid;
+                        transform: scale(1.14);
+                        border-radius: 100%;
+                        z-index: 0;
+                        mix-blend-mode: overlay;
+                    }
                 }
-                @include respond (maxWidth768){
+
+                @include respond (maxWidth768) {
                     width: 37.5rem;
                     margin: auto;
                 }
-                @media screen and (max-width:380px){
+
+                @media screen and (max-width:380px) {
                     width: calc(100% - 3rem);
                 }
+
                 aspect-ratio: 1;
                 border-radius: 100%;
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
                     border-radius: inherit;
-                    @include respond (minWidth768){
-                        outline: 10px solid #fff;
-    transform: scale(1.14);
+
+                    @include respond (minWidth768) {
+                        outline: 8px solid #fff;
+                        transform: scale(1.14);
                     }
                 }
             }

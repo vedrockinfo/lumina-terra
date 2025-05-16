@@ -1,6 +1,18 @@
+.leaf-hold{
+    background: $color-secondary;
+    h2{
+        margin: 5rem 0;
+    }
+}
 .sustainable-area {
     overflow-x: hidden;
 
+    .btn-wrapper{
+        margin-top: 3rem;
+        a{
+            @include globalBtnOne();
+        }
+    }
     .sustaible-grid {
         display: grid;
         grid-template-columns: 53% 45%;
@@ -51,7 +63,7 @@
 }
 
 .signature-strength {
-    background: $color-tertiary;
+    
 
     .signature-grid {
         display: grid;
@@ -70,8 +82,9 @@
 
                 &::before {
                     @include vector(84.2px, 84px);
-                    mix-blend-mode: plus-lighter;
+                    // mix-blend-mode: plus-lighter;
                     top: -9%;
+                    // filter: invert(1) brightness(100) sepia(1);
                     right: -17%;
 
                     @include respond (maxWidth768) {
@@ -87,7 +100,7 @@
                     aspect-ratio: 1;
                     margin: auto;
                     padding: 3rem;
-                    background: $color-white;
+                    background: $color-tertiary;
                     border-radius: 100%;
                     position: relative;
 
@@ -242,38 +255,67 @@ top: 0;
     }
     .educational-grid {
         display: grid;
-        gap: 3rem;
-        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
+        @include respond (minWidth992){
+            row-gap: 8rem;
+        }
 
         .educational-grid-item {
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            padding: 3rem;
+            // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            // padding: 3rem;
             background: #ffffff;
             border-radius: 1rem;
             transition: all 0.3s;
-            position: relative;
+            // position: relative;
             overflow: hidden;
-            &::after{
-                content: "";
-                background: $color-button;
-                position: absolute;
-                width: 0;
-                height: 3px;
-                bottom: 0;
-                transition: all 0.3s;
-                left: 0;
+            @include respond (minWidth992){
+                &:nth-child(2){
+                    &::before{
+                        top: 28%;
+                    }
+                }
+                &:nth-child(3){
+                    &::before{
+                        top: 28%;
+                    }
+                }
+                &:nth-child(6){
+                    &::before{
+                        bottom: 32%;
+                    }
+                }
+                &:nth-child(7){
+                    &::before{
+                        bottom: 32%;
+                    }
+                }
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(6),
+                &:nth-child(7) {
+                    &::before {
+                        @include vector(84.2px, 84px);
+                       
+                    }
+                }
             }
+            
+            @include respond (minWidth768){
+                &.s-last{
+                    grid-column-start: 2;
+                }
+            }
+            
             &:hover{
                 border-radius: 1rem 1rem 0 0;
-                transform: translateY(-3px);
                 background: lighten(#f7f7f7, $amount: 2);
                 .heading-tertiary{
-                    color: $color-button;
+                    color: $color-tertiary;
                 cursor: pointer;
                 }
-                &::after{
-                    width: 100%;
-                }
+                
             }
             .content-para{
                 text-align: center;
@@ -323,7 +365,7 @@ top: 0;
 }
 
 .globalbtn-three {
-    @include globalBtnTHree;
+    @include globalBtnThree;
     display: none;
 }
 
@@ -378,4 +420,26 @@ top: 0;
         }
     }
 
+}
+.sus-campus{
+    background: url(../images/map-bg-01.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    
+    .campus-grid{
+        width: 35rem;
+        @include respond (minWidth992){
+            margin-left: 7rem;
+        }
+        .content-wrapper{
+            background: rgba($color-tertiary, 0.5);
+            padding: 14rem 3rem;
+            text-align: center;
+            h2{
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }

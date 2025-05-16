@@ -1,5 +1,5 @@
 .welcome-area {
-    background: $color-tertiary;
+    background: linear-gradient(90deg, $color-tertiary 25%, $color-white 25%);
     .row{
         @include respond (minWidth768){
             display: flex;
@@ -16,8 +16,8 @@
         text-align: center;
 
         img {
-            mix-blend-mode: color-dodge;
-            opacity: 0.7;
+            // mix-blend-mode: color-dodge;
+            opacity: 1;
             width: 10rem;
             @include respond (maxWidth768){
                 margin-top: 2rem;

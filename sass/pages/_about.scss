@@ -194,7 +194,7 @@
 }
 
 .our-beliefs {
-    background: $color-tertiary;
+    background: $color-secondary;
 
     .col-md-4{
         &:not(:last-child){
@@ -250,6 +250,7 @@
 
         a {
             @include globalBtnTwo();
+            margin-top: 3rem;
         }
     }
 }

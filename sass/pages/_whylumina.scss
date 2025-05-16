@@ -1,0 +1,73 @@
+.whylumina {
+    h2{
+        position: relative;
+
+        &::after {
+            @include vector(85px, 84px);
+            top: 0;
+            right: -4rem;
+            transform: scale(0.75);
+        }
+    }
+    .img-wrapper {
+        width: 100%;
+        position: relative;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        transform: scale(0.85);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            outline: 12px solid $color-tertiary;
+            transform: scale(1.14);
+            border-radius: 100%;
+            z-index: -1;
+            @include respond(minWidth575) {
+                transform: scale(1.07);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+
+            @include respond(minWidth768) {
+                outline: 8px solid #fff;
+                transform: scale(1.14);
+            }
+        }
+    }
+}
+.whyluminatwo{
+    background: $color-secondary;
+    @extend .whylumina;
+    .heading-primary{
+        &::after{
+            right: auto;
+            left: -10rem;
+            filter: invert(1) brightness(100);
+        }
+    }
+    .img-wrapper::before{
+        outline-color: $color-black;
+    }
+    .internal-link{
+        color: $color-black;
+    }
+}
+.whyluminathree, .whyluminafive{
+    @extend .whylumina;
+}
+.whyluminafour{
+    @extend .whyluminatwo;
+}
+.lumina-goals{
+    @extend .lumina-hub;
+}

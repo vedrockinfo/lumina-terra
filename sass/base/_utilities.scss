@@ -62,7 +62,7 @@
     height: 5px;
     width: 100%;
     display: block;
-    background: $color-primary;
+    background: $color-tertiary;
     margin-bottom: 3rem;
 }
 .border-one{
@@ -97,6 +97,9 @@
         left: 50%;
         line-height: 1;
         margin-bottom: 0;
+        width: 100%;
+    text-align: center;
+    padding: 0 10px;
     }
     &.register{
         &::before{
@@ -144,4 +147,12 @@ input:-webkit-autofill {
 
 .modal-backdrop {
     z-index: 9;
+}
+.internal-link{
+    color: $color-tertiary;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover{
+        text-decoration: underline;
+    }
 }

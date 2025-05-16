@@ -1,23 +1,29 @@
 .hero-section {
-    padding-top: 10rem;
-    background-image: $mainBg;
+    background-image: url(../images/hero-02.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 72rem;
 
     .hero-grid {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        align-items: center;
+        padding-top: 18.5rem;
+
+        @include respond (maxWidth768) {
+            padding-top: 7rem;
+        }
 
         .hero-grid-item {
             flex: 0 0 50%;
             max-width: 50%;
-            @include respond (maxWidth768){
+
+            @include respond (maxWidth768) {
                 max-width: 100%;
                 text-align: center;
-                &:first-child{
+
+                &:first-child {
                     padding: 30px 0 20px 0;
                     width: max-content;
                     margin: auto;
@@ -27,110 +33,157 @@
             .content-wrapper {
                 position: relative;
 
-                &::before {
-                    @include vector(69.4px, 70.32px);
-                    right: 120px;
-                    top: -60%;
-                    transform: translate(0, -100%);
-                    @include respond (maxWidth1200) {
-                        @include vector(80.4px, 79.32px);
-                        left: 62px;
-                        top: 0;
-                    }
-                    @include respond (maxWidth992){
-                        left: 30px;
-                    }
-                    @include respond (maxWidth768){
-                        display: none;
-                    }
-                }
+                // &::before {
+                //     @include vector(69.4px, 70.32px);
+                //     right: 120px;
+                //     top: -60%;
+                //     transform: translate(0, -100%);
+                //     @include respond (maxWidth1200) {
+                //         @include vector(80.4px, 79.32px);
+                //         left: 62px;
+                //         top: 0;
+                //     }
+                //     @include respond (maxWidth992){
+                //         left: 30px;
+                //     }
+                //     @include respond (maxWidth768){
+                //         display: none;
+                //     }
+                // }
 
-                &::after {
-                    @include vector(69.4px, 70.32px);
-                    right: 20px;
-                    bottom: -80px;
-                    @include respond (maxWidth1200) {
-                        @include vector(92.4px, 87.32px);
-                        right: 40px;
-    bottom: -50px;
-                    }
-                    @include respond (maxWidth768){
-                        display: none;
-                    }
-                }
+                //             &::after {
+                //                 @include vector(69.4px, 70.32px);
+                //                 right: 20px;
+                //                 bottom: -80px;
+                //                 @include respond (maxWidth1200) {
+                //                     @include vector(92.4px, 87.32px);
+                //                     right: 40px;
+                // bottom: -50px;
+                //                 }
+                //                 @include respond (maxWidth768){
+                //                     display: none;
+                //                 }
+                //             }
 
-                h6{
+                a {
                     color: $color-white;
                     background: $color-primary;
                     padding: 7.5px 15px;
-                    display: block;
-                    width: fit-content;
-                    margin: 0 auto;
+                    display: inline-block;
+                    margin: 2rem auto 0;
                     font-family: $fontFour;
                     font-size: 28px;
-    letter-spacing: 11.5px;
-    text-shadow: 2px 2px 1px #02768a;
-                    @include respond (maxWidth1200){
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background: darken($color-primary, $amount: 10);
+                    }
+
+                    @include respond (maxWidth1200) {
                         font-size: 20px;
                     }
-                    @include respond (maxWidth992){
+
+                    @include respond (maxWidth992) {
                         font-size: 18px;
                     }
-                    @include respond (maxWidth768){
-                        font-size: 20px;
-        line-height: 1.5;
-        letter-spacing: 3px;
+
+                    @include respond (maxWidth768) {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        letter-spacing: 3px;
                     }
                 }
 
                 h1 {
-                    font-family: $fontFour;
+                    font-family: 'mostiva-light', sans-serif;
                     text-transform: capitalize;
-                    color: $color-primary;
+                    color: $color-white;
                     font-size: 68px;
-                    letter-spacing: 0.78px;
-                    font-weight: 300;
-                    text-align: center;
-                    margin: 0;
-                    span{
-                        color: $color-secondary;
+                    font-weight: 100;
+
+                    @include respond (maxWidth768) {
+                        text-align: center;
                     }
-                    @include respond (maxWidth1200){
+
+                    margin: 0;
+
+
+
+                    @include respond (maxWidth1200) {
                         font-size: 53px;
                     }
-                    @include respond (maxWidth992){
+
+                    @include respond (maxWidth992) {
                         font-size: 36px;
                     }
                 }
 
+                h2 {
+                    text-align: left;
+
+                    @include respond (maxWidth768) {
+                        text-align: center;
+                    }
+
+                    font-size: 38px;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    font-family: "mostiva-bold";
+                    margin: 0;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    border-top: 2px solid;
+                    border-bottom: 2px solid;
+                    padding: 7px 15px;
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    margin-top: 10px;
+                    @include respond (maxWidth1200) {
+                        font-size: 30px;
+                    }
+
+                    @include respond (maxWidth992) {
+                        font-size: 24px;
+                    }
+                }
+
                 h4 {
-                    text-align: center;
+                    text-align: left;
+
+                    @include respond (maxWidth575) {
+                        text-align: center;
+                        color: $color-white;
+                    }
+
                     font-size: 24px;
                     text-transform: capitalize;
                     color: $color-text;
                     font-family: "mostiva-bold";
                     margin: 0;
                     position: relative;
-                    &::before {
-                        @include vector(162.4px, 167.32px);
-                        left: 83px;
-                        transform: translateY(40%);
-                        @include respond (maxWidth1200) {
-                            @include vector(80.4px, 79.32px);
-                            left: 62px;
-                            top: 50px;
-                        }
-                        @include respond (maxWidth992){
-                            left: 30px;
-                        }
-                        @include respond (maxWidth768){
-                            display: none;
-                        }
-                    }
-                    @include respond (maxWidth1200){
+
+                    // &::before {
+                    //     @include vector(162.4px, 167.32px);
+                    //     left: 83px;
+                    //     transform: translateY(40%);
+                    //     @include respond (maxWidth1200) {
+                    //         @include vector(80.4px, 79.32px);
+                    //         left: 62px;
+                    //         top: 50px;
+                    //     }
+                    //     @include respond (maxWidth992){
+                    //         left: 30px;
+                    //     }
+                    //     @include respond (maxWidth768){
+                    //         display: none;
+                    //     }
+                    // }
+                    @include respond (maxWidth1200) {
                         font-size: 40px;
                     }
-                    @include respond (maxWidth992){
+
+                    @include respond (maxWidth992) {
                         font-size: 30px;
                     }
                 }
@@ -147,11 +200,12 @@
                     width: fit-content;
                     color: $color-text;
                     font-family: "mostiva-bold";
-                    
-                    @include respond (maxWidth1200){
+
+                    @include respond (maxWidth1200) {
                         font-size: 40px;
                     }
-                    @include respond (maxWidth992){
+
+                    @include respond (maxWidth992) {
                         font-size: 30px;
                     }
                 }
@@ -165,7 +219,8 @@
                 margin-left: auto;
                 border-radius: 100%;
                 position: relative;
-                .boundless-future{
+
+                .boundless-future {
                     position: absolute;
                     bottom: 0;
                     left: 50%;
@@ -174,32 +229,37 @@
                     height: auto;
                     border-radius: 0;
                 }
-                @include respond (maxWidth1200){
+
+                @include respond (maxWidth1200) {
                     width: 40rem;
                     height: 40rem;
                 }
-                @include respond (maxWidth768){
+
+                @include respond (maxWidth768) {
                     margin-right: auto;
                 }
-                @include respond (maxWidth575){
+
+                @include respond (maxWidth575) {
                     width: 28rem;
                     height: 28rem;
                 }
 
-                &::after {
-                    @include vector(113.4px, 112.32px);
-                    right: -27px;
-                    top: 40px;
-                    @include respond (maxWidth1200){
-                        right: -45px;
-                        top: 12px;
-                    }
-                    @include respond (maxWidth575){
-                        @include vector(50.4px, 48.32px);
-                    right: 0;
-                    top: 9px;
-                    }
-                }
+                // &::after {
+                //     @include vector(113.4px, 112.32px);
+                //     right: -27px;
+                //     top: 40px;
+
+                //     @include respond (maxWidth1200) {
+                //         right: -45px;
+                //         top: 12px;
+                //     }
+
+                //     @include respond (maxWidth575) {
+                //         @include vector(50.4px, 48.32px);
+                //         right: 0;
+                //         top: 9px;
+                //     }
+                // }
 
                 img {
                     width: 100%;
