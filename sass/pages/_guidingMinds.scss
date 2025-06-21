@@ -1,0 +1,120 @@
+.ourManagement {
+    .mCard {
+        margin: 1rem;
+
+        .mTeam {
+            width: 100%;
+            height: 40rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            position: relative;
+
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .btnWrapper {
+            text-align: center;
+            margin-top: 3rem;
+
+
+        }
+
+        .mProfile {
+            position: absolute;
+            right: -1rem;
+            bottom: 3.5rem;
+            background: $color-tertiary;
+            padding: 1rem;
+            width: calc(100% - 3rem);
+
+            &::after {
+                content: "";
+                background: darken($color-tertiary, $amount: 20);
+                position: absolute;
+                right: 4px;
+                bottom: -10px;
+                width: 20px;
+                height: 20px;
+                transform: rotate(45deg);
+                z-index: -1;
+            }
+
+            .name {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                padding: 0.5rem 1rem;
+                display: inline-block;
+                color: #fff;
+            }
+
+            .desig {
+                text-transform: capitalize;
+                text-align: right;
+                font-style: oblique;
+                font-weight: 200;
+                font-size: 14px;
+                color: #fff;
+
+                &::before {
+                    content: "~";
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+
+        a {
+            @include globalBtnThree;
+            display: none;
+        }
+    }
+}
+
+.advisoryboard {
+    .advisory-members {
+        background: $color-white;
+        text-align: center;
+        border-radius: 140px 140px 80px 80px;
+        height: 40rem;
+        background: radial-gradient(circle at 30% 30%, #ffffff, #ccc);
+        box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.4),
+            inset 10px 10px 20px rgba(0, 0, 0, 0.1),
+            0 10px 20px rgba(0, 0, 0, 0.2);
+        border-top: 5rem solid $color-tertiary;
+
+        .img-wrapper {
+            width: 15rem;
+            height: 15rem;
+            margin: 3rem auto 0;
+
+            img {
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 100%;
+                border: 4px solid #fff;
+                outline: 4px solid $color-tertiary;
+            }
+        }
+
+        .heading-tertiary {
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            border-top: 2px solid $color-tertiary;
+            display: inline-block;
+            color: $color-tertiary;
+            border-bottom: 2px solid $color-tertiary;
+        }
+        .designation{
+            color: $color-text;
+            margin-top: .5rem;
+            font-size: 1.6rem;
+            padding: 0 4rem;
+        }
+    }
+}

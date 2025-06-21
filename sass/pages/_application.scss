@@ -1,0 +1,115 @@
+.how-to-apply {
+    .application-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @include respond (maxWidth992) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond (maxWidth575) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .application-grid-item {
+            background: $color-quaternary;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            border: 2px solid transparent;
+            border-radius: 2rem;
+            position: relative;
+
+            @include respond (maxWidth575) {
+            width: 300px;
+            margin: auto;
+            .heading-tertiary{
+                margin-top: 0;
+            }
+            @media screen and (max-width:320px) {
+                width: calc(100% - 2rem);
+            }
+        }
+
+           
+
+            @include respond (minWidth992) {
+                &:not(:nth-child(3n)) {
+                    &::after {
+                        content: "\f30b";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        font-size: 20px;
+                        position: absolute;
+                        right: -1px;
+                        color: $color-tertiary;
+                        top: 50%;
+                        transform: translate(100%, -50%);
+                    }
+                }
+            }
+
+            @include respond (maxWidth575) {
+                &:not(:last-child) {
+                    &::after {
+                        content: "\f30b";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        font-size: 16px;
+                        position: absolute;
+                        left: 50%;
+                        color: $color-tertiary;
+                        bottom: 0;
+                        transform: translate(-50%, 86%) rotate(90deg);
+                    }
+                }
+            }
+
+             @media screen and (min-width:575.1px) and (max-width:991.9px) {
+                &:not(:nth-child(2n)) {
+                    &::after {
+                        content: "\f30b";
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        font-size: 18px;
+                        position: absolute;
+                        right: -1px;
+                        color: $color-tertiary;
+                        top: 50%;
+                        transform: translate(100%, -50%);
+                    }
+                }
+            }
+
+            &:last-child {
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .btnone a {
+                    @include globalBtnThree();
+                    color: $color-text;
+                    border-color: $color-text
+                }
+
+                .btntwo a {
+                    @include globalBtnThree();
+                    color: $color-text;
+                    border-color: $color-text
+                }
+            }
+
+            &:hover {
+                background: $color-secondary;
+                border-color: $color-tertiary;
+            }
+
+            .heading-tertiary {
+                line-height: 1.5;
+                font-weight: normal;
+            }
+        }
+    }
+}

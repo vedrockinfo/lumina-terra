@@ -89,3 +89,24 @@ $(document).ready(function() {
             this.classList.remove("has-value");
         }
     });
+    
+    $('.management').owlCarousel({
+    loop:true,
+    margin:20,
+    dots:false,
+    nav:true,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    mouseDrag:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});

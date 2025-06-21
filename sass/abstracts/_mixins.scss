@@ -11,6 +11,9 @@
     @if $breakpoint == maxWidth992 {
         @media only screen and (max-width: 991.9px) { @content };    //1200px
     }
+    @if $breakpoint == minWidth575 {
+        @media only screen and (min-width: 575.1px) { @content };    //1200px
+    }
     @if $breakpoint == minWidth992 {
         @media only screen and (min-width: 992px) { @content };    //1200px
     }
