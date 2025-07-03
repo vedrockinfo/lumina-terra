@@ -1,5 +1,10 @@
 .welcome-area {
-    background: linear-gradient(90deg, $color-tertiary 25%, $color-white 25%);
+    @include respond (minWidth768){
+        background: linear-gradient(90deg, darken($color-primary, 18) 25%, lighten($color-primary, 60) 25%);
+    }
+    @include respond(maxWidth768){
+        background: lighten($color-primary, 60);
+    }
     .row{
         @include respond (minWidth768){
             display: flex;

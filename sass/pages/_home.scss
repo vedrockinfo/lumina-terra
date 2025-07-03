@@ -1,18 +1,25 @@
-.leaf-hold{
-    background: $color-secondary;
-    h2{
+.leaf-hold {
+    &.bg-1 {
+        background-image: $gradientOne;
+        color: $color-white;
+    }
+
+    h2 {
         margin: 5rem 0;
     }
 }
+
 .sustainable-area {
     overflow-x: hidden;
 
-    .btn-wrapper{
+    .btn-wrapper {
         margin-top: 3rem;
-        a{
+
+        a {
             @include globalBtnOne();
         }
     }
+
     .sustaible-grid {
         display: grid;
         grid-template-columns: 53% 45%;
@@ -23,9 +30,10 @@
     }
 
     .img-wrapper {
-        width: 50rem;
-        height: 50rem;
+        width: 46rem;
+        height: 46rem;
         margin-top: 2rem;
+        margin-left: auto;
         margin-bottom: 2rem;
         border-radius: 100%;
 
@@ -44,14 +52,13 @@
             margin-left: auto;
             margin-right: auto;
             outline: none;
-            border: 2rem solid $color-tertiary;
+            border: 2rem solid $color-primary;
         }
 
-        @include respond (minWidth768) {
-            transform: translateX(28%);
-        }
-
-        outline: 6rem solid $color-tertiary;
+        outline: 1rem solid $color-primary;
+        border: 1rem solid $color-white;
+        background: $color-primary;
+        padding: 20px;
 
         img {
             border-radius: 100%;
@@ -63,7 +70,7 @@
 }
 
 .signature-strength {
-    
+
 
     .signature-grid {
         display: grid;
@@ -99,10 +106,14 @@
                     width: 100%;
                     aspect-ratio: 1;
                     margin: auto;
-                    padding: 3rem;
-                    background: $color-tertiary;
+                    outline: 1rem solid $color-primary;
+                    border: 1rem solid $color-white;
+                    background: $color-primary;
+                    padding: 15px;
+                    border: 0.7rem solid $color-white;
                     border-radius: 100%;
                     position: relative;
+                    transform: scale(0.95);
 
                     img {
                         width: 100%;
@@ -116,8 +127,8 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        width: calc(100% - 6rem);
-                        height: calc(100% - 6rem);
+                        width: 100%;
+                        height: 100%;
                         border-radius: 100%;
                         transform: translate(-50%, -50%);
                         opacity: 0;
@@ -152,6 +163,7 @@
                     padding: 1rem;
                     border-top: 1px solid rgba($color-text, 0.3);
                     border-bottom: 1px solid rgba($color-text, 0.3);
+                    color: rgba($color-primary, 1);
                 }
 
                 .content-para {
@@ -164,26 +176,31 @@
 }
 
 .educational-visioners {
-    .globalbtn-one{
+    .globalbtn-one {
         @include globalBtnTwo;
         display: none;
     }
-    .modal{
 
-        .modal-dialog{
+    .modal {
+
+        .modal-dialog {
             max-width: 100%;
             padding: 0;
-            @include respond (minWidth992){
+
+            @include respond (minWidth992) {
                 width: 800px;
             }
-            @include respond (maxWidth575){
+
+            @include respond (maxWidth575) {
                 width: 90%;
             }
-            @include respond (maxWidth992){
+
+            @include respond (maxWidth992) {
                 width: 500px;
             }
         }
-        .modal-content{
+
+        .modal-content {
             border: 0;
             border-radius: 0;
             width: 100%;
@@ -192,20 +209,24 @@
             padding: 0;
             position: relative;
         }
-        button{
+
+        button {
             position: absolute;
-right: 0;
-top: 0;
+            right: 0;
+            top: 0;
         }
-        .modal-body{
+
+        .modal-body {
             padding: 0;
         }
     }
-    .committee-wrapper{
-        .popup-img-wrapper{
+
+    .committee-wrapper {
+        .popup-img-wrapper {
             padding-top: 3rem;
             position: relative;
-            img{
+
+            img {
                 display: block;
                 width: 23.6rem;
                 height: 23.6rem;
@@ -216,11 +237,12 @@ top: 0;
                 z-index: 1;
                 border: 4px solid #28aae4;
                 object-position: top;
-    outline: 4px solid #ffffff;
+                outline: 4px solid #ffffff;
             }
-            &::before{
+
+            &::before {
                 content: "";
-                background: $color-button;
+                background: $color-secondary;
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -229,7 +251,8 @@ top: 0;
                 clip-path: polygon(0 0, 100% 0%, 100% 30%, 50% 80%, 0 30%);
                 z-index: 0;
             }
-            &::after{
+
+            &::after {
                 content: "";
                 background: url(https://dignityeducation.org/fellowship/image/bg-01.jpg);
                 position: absolute;
@@ -242,23 +265,27 @@ top: 0;
                 background-size: cover;
                 background-position: bottom;
                 mix-blend-mode: multiply;
-    opacity: 0.2;
+                opacity: 0.2;
             }
         }
-        .content-wrapper{
+
+        .content-wrapper {
             padding: 0 2rem 0;
-            p{
+
+            p {
                 padding-bottom: 2rem;
             }
         }
-        
+
     }
+
     .educational-grid {
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(4, 1fr);
         position: relative;
-        @include respond (minWidth992){
+
+        @include respond (minWidth992) {
             row-gap: 8rem;
         }
 
@@ -270,70 +297,84 @@ top: 0;
             transition: all 0.3s;
             // position: relative;
             overflow: hidden;
-            @include respond (minWidth992){
-                &:nth-child(2){
-                    &::before{
+
+            @include respond (minWidth992) {
+                &:nth-child(2) {
+                    &::before {
                         top: 28%;
                     }
                 }
-                &:nth-child(3){
-                    &::before{
+
+                &:nth-child(3) {
+                    &::before {
                         top: 28%;
                     }
                 }
-                &:nth-child(6){
-                    &::before{
+
+                &:nth-child(6) {
+                    &::before {
                         bottom: 32%;
                     }
                 }
-                &:nth-child(7){
-                    &::before{
+
+                &:nth-child(7) {
+                    &::before {
                         bottom: 32%;
                     }
                 }
+
                 &:nth-child(2),
                 &:nth-child(3),
                 &:nth-child(6),
                 &:nth-child(7) {
                     &::before {
                         @include vector(84.2px, 84px);
-                       
+
                     }
                 }
             }
-            
-            @include respond (minWidth768){
-                &.s-last{
+
+            @include respond (minWidth768) {
+                &.s-last {
                     grid-column-start: 2;
                 }
             }
-            
-            &:hover{
+
+            &:hover {
                 border-radius: 1rem 1rem 0 0;
                 background: lighten(#f7f7f7, $amount: 2);
-                .heading-tertiary{
-                    color: $color-tertiary;
-                cursor: pointer;
+
+                .heading-tertiary {
+                    color: $color-primary;
+                    cursor: pointer;
                 }
-                
+
             }
-            .content-para{
+
+            .content-para {
                 text-align: center;
                 border-top: 1px solid rgba($color-text, 0.1);
                 padding-top: 1rem;
+                @include respond (minWidth768){
+                    height: 165px;
+                }
             }
+
             .text-center {
                 margin-top: 2rem;
-                a{
-                    @include globalBtnThree;
+
+                a {
+                    @include globalBtnTwo();
                 }
             }
         }
 
-        .heading-tertiary{
+        .heading-tertiary {
             transition: all 0.3s;
             padding-bottom: 1rem;
-            a{
+            color: rgba($color-primary, 1);
+
+            a {
                 color: inherit;
                 text-decoration: none;
             }
@@ -352,7 +393,7 @@ top: 0;
             aspect-ratio: 1;
             border-radius: 100%;
             overflow: hidden;
-            border: 5px solid $color-tertiary;
+            border: 5px solid $color-primary;
             margin: auto;
 
             img {
@@ -377,16 +418,17 @@ top: 0;
     transform-origin: left center;
     border-radius: 5px;
     z-index: 9;
-    @include respond (maxWidth575){
+
+    @include respond (maxWidth575) {
         transform: none;
         bottom: 0;
         top: auto;
         width: 100%;
-        
+
     }
 
     a {
-        background: $color-button;
+        background: $color-secondary;
         padding: 1rem 2rem;
         color: $color-white;
         text-decoration: none;
@@ -394,15 +436,16 @@ top: 0;
         border: none;
         display: block;
         transition: all 0.3s;
-        box-shadow:  
-        -1px 0 0 $color-primary,
-        -2px -1px 0 $color-primary,
-        -3px -2px 0 $color-primary,
-        -4px -3px 0 $color-primary,
-        -5px -4px 0 $color-primary,
-        -6px -5px 0 $color-primary,
-        -7px -6px 0 $color-primary,
-        -8px -7px 0 $color-primary;
+        box-shadow:
+            -1px 0 0 $color-primary,
+            -2px -1px 0 $color-primary,
+            -3px -2px 0 $color-primary,
+            -4px -3px 0 $color-primary,
+            -5px -4px 0 $color-primary,
+            -6px -5px 0 $color-primary,
+            -7px -6px 0 $color-primary,
+            -8px -7px 0 $color-primary;
+
         @include respond (maxWidth575) {
             padding: 0.8rem 1.5rem;
             font-size: 2rem;
@@ -411,34 +454,39 @@ top: 0;
             font-weight: bold;
             text-align: center;
             box-shadow: none;
-            
+
         }
 
         &:hover {
             text-decoration: none;
-            background: darken($color-button, $amount: 5);
+            background: darken($color-secondary, $amount: 5);
         }
     }
 
 }
-.sus-campus{
+
+.sus-campus {
     background: url(../images/map-bg-01.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
-    
-    .campus-grid{
+
+    .campus-grid {
         width: 35rem;
-        @include respond (minWidth992){
+
+        @include respond (minWidth992) {
             margin-left: 7rem;
         }
-        .content-wrapper{
-            background: rgba($color-tertiary, 0.5);
+
+        .content-wrapper {
+            background: rgba($color-primary, 0.5);
             padding: 14rem 3rem;
             text-align: center;
-            h2{
+
+            h2 {
                 margin-bottom: 2rem;
+                color: rgba($color-text, 1);
             }
         }
     }

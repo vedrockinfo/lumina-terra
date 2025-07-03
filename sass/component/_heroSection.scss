@@ -1,27 +1,60 @@
 .hero-section {
-    background-image: url(../images/hero-02.jpg);
+    // background-image: radial-gradient(circle, rgba($color-primary, 1) 0%, rgba($color-primary, 1) 100%);
+    // background-image: $gradientOne;
     background-position: center;
+    background-image: url(../../images/hero-02.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 72rem;
+    min-height: 112vh;
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: linear-gradient(90deg, #00000094 30%, transparent 60%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+    }
+
+    .video-wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        display: none;
+    }
+
+    @media screen and (max-height:600px) {
+        min-height: 72rem;
+    }
 
     .hero-grid {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        padding-top: 18.5rem;
+        align-items: center;
+        min-height: 112vh;
+
+        @media screen and (max-height:600px) {
+            min-height: 72rem;
+        }
 
         @include respond (maxWidth768) {
             padding-top: 7rem;
         }
 
         .hero-grid-item {
-            flex: 0 0 50%;
-            max-width: 50%;
+
 
             @include respond (maxWidth768) {
                 max-width: 100%;
-                text-align: center;
 
                 &:first-child {
                     padding: 30px 0 20px 0;
@@ -32,39 +65,28 @@
 
             .content-wrapper {
                 position: relative;
+    // background: #0000003b;
+    // padding: 30px;
+    color: #fff;
+    // margin-top: 8rem;
 
-                // &::before {
-                //     @include vector(69.4px, 70.32px);
-                //     right: 120px;
-                //     top: -60%;
-                //     transform: translate(0, -100%);
-                //     @include respond (maxWidth1200) {
-                //         @include vector(80.4px, 79.32px);
-                //         left: 62px;
-                //         top: 0;
-                //     }
-                //     @include respond (maxWidth992){
-                //         left: 30px;
-                //     }
-                //     @include respond (maxWidth768){
-                //         display: none;
-                //     }
-                // }
+                @include respond (maxWidth768) {
+                    text-align: center;
+                }
 
-                //             &::after {
-                //                 @include vector(69.4px, 70.32px);
-                //                 right: 20px;
-                //                 bottom: -80px;
-                //                 @include respond (maxWidth1200) {
-                //                     @include vector(92.4px, 87.32px);
-                //                     right: 40px;
-                // bottom: -50px;
-                //                 }
-                //                 @include respond (maxWidth768){
-                //                     display: none;
-                //                 }
-                //             }
-
+                .rouded{
+                    background: $color-white;
+                    color: #214d25;
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                    padding: 1rem 3rem;
+                    border-radius: 50px;
+                    display: inline-block;
+                    border: 2px solid #214d25;
+                    outline: 2px solid $color-white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
                 a {
                     color: $color-white;
                     background: $color-primary;
@@ -76,7 +98,8 @@
                     text-decoration: none;
                     font-weight: bold;
                     transition: all 0.3s ease;
-                    &:hover{
+
+                    &:hover {
                         background: darken($color-primary, $amount: 10);
                     }
 
@@ -95,12 +118,35 @@
                     }
                 }
 
+                h5{
+                    margin-top: 2rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+
+                    span{
+                        display: inline-block;
+                        color: #214d25;
+                            font-size: 1.6rem;
+                            font-family: $fontPrimary;
+                            text-transform: uppercase;
+                            padding: 5px 13px;
+                            font-weight: 600;
+                            border: 2px solid #214d25;
+                    outline: 2px solid $color-white;
+                            margin-right: 5px;
+                            border-radius: 30px;
+                            background: $color-white;
+                    }
+                }
+
                 h1 {
-                    font-family: 'mostiva-light', sans-serif;
+                    font-family: $fontPrimary;
                     text-transform: capitalize;
                     color: $color-white;
-                    font-size: 68px;
-                    font-weight: 100;
+                    font-size: 60px;
+                    font-weight: 700;
+                    text-shadow: 5px 5px 4px rgba($color-primary, $alpha: 0.4);
 
                     @include respond (maxWidth768) {
                         text-align: center;
@@ -127,18 +173,21 @@
                     }
 
                     font-size: 38px;
+                    text-shadow: 3px 3px 4px rgba($color-primary, $alpha: 0.4);
                     text-transform: uppercase;
                     color: $color-white;
                     font-family: "mostiva-bold";
                     margin: 0;
                     letter-spacing: 1px;
                     font-weight: 700;
+                    // text-shadow: 2px 2px 4px #00000057;
                     border-top: 2px solid;
                     border-bottom: 2px solid;
-                    padding: 7px 15px;
+                    padding: 5px 15px;
                     display: inline-block;
                     margin-bottom: 15px;
                     margin-top: 10px;
+
                     @include respond (maxWidth1200) {
                         font-size: 30px;
                     }
@@ -150,17 +199,22 @@
 
                 h4 {
                     text-align: left;
+                    color: $color-white;
+                    text-shadow: 2px 2px 4px rgba($color-primary, $alpha: 0.4);
 
                     @include respond (maxWidth575) {
                         text-align: center;
                         color: $color-white;
+                        font-size: 2rem !important;
+                        font-weight: 500;
+                        line-height: 1.5;
                     }
 
                     font-size: 24px;
-                    text-transform: capitalize;
-                    color: $color-text;
-                    font-family: "mostiva-bold";
+                    text-transform: uppercase;
+                    font-family: $fontPrimary;
                     margin: 0;
+                    font-weight: bold;
                     position: relative;
 
                     // &::before {
@@ -216,7 +270,8 @@
                 height: 50rem;
                 text-align: right;
                 border: 1.5px solid $color-primary;
-                margin-left: auto;
+                outline: 2px solid $color-white;
+                // margin-left: auto;
                 border-radius: 100%;
                 position: relative;
 
@@ -236,13 +291,11 @@
                 }
 
                 @include respond (maxWidth768) {
-                    margin-right: auto;
+                    margin: auto auto 3rem;
+                    width: calc(100% - 2rem);
+                    height: calc(100% - 2rem);
                 }
 
-                @include respond (maxWidth575) {
-                    width: 28rem;
-                    height: 28rem;
-                }
 
                 // &::after {
                 //     @include vector(113.4px, 112.32px);
@@ -265,14 +318,14 @@
                     width: 100%;
                     height: 100%;
                     border-radius: 100%;
-                    padding: 1rem;
+                    padding: 0.5rem;
                     object-position: 67% 100%;
                 }
             }
         }
 
         @include respond (maxWidth768) {
-            display: block;
+            flex-direction: column;
         }
     }
 }

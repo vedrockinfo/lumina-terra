@@ -1,13 +1,13 @@
 // COLORS
-$color-primary: #191970;
-$color-secondary:linear-gradient(45deg, #CD7F32, #ffd799);
-$color-tertiary:#CD7F32;
-$color-quaternary:#ffd799;
-$color-button:#191970;
+$color-primary: #38833f;
+$color-secondary:#41c3db;
+$color-tertiary:#ffd367;
 $color-text:#221f20;
-$color-grey:#D8D8D8;
-$color-white: #FDF6EC;
+$color-white:#ffffff;
+$color-cream: #FDF6EC;
 $color-black: #000;
+
+$gradientOne:linear-gradient(-45deg, lighten($color-primary, 20), darken($color-primary, 15));
 
 $fontPrimary:"Poppins", sans-serif;
 $fontSecondary:"Playfair Display", serif;

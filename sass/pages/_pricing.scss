@@ -1,5 +1,5 @@
 .why-lumina {
-    background: $color-quaternary;
+    background: $color-tertiary;
 
     h2 {
         position: relative;
@@ -39,7 +39,6 @@
     // @include respond (minWidth768){
     //     background: linear-gradient(90deg, $color-grey 20%, $color-white 20%, $color-white 80%, $color-grey 80%);
     // }
-    background: $color-secondary;
 
     .mission-grid {
         display: grid;
@@ -60,15 +59,16 @@
 
         .mission-item {
 
-            @include respond (minWidth768){
-                h2{
+            @include respond (minWidth768) {
+                h2 {
                     position: relative;
                     margin-bottom: 30px;
-                    &::before{
+
+                    &::before {
                         width: 100%;
                         content: "";
                         height: 5px;
-                        background: $color-white;
+                        background: $color-primary;
                         position: absolute;
                         bottom: -15px;
                         left: 0;
@@ -116,19 +116,21 @@
             }
 
             @include respond (minWidth768) {
-                h2{
+                h2 {
                     position: relative;
                     margin-bottom: 30px;
-                    &::before{
+
+                    &::before {
                         width: 100%;
                         content: "";
                         height: 5px;
-                        background: $color-white;
+                        background: $color-primary;
                         position: absolute;
                         bottom: -15px;
                         right: 0;
                     }
                 }
+
                 text-align: right;
                 padding: 7rem 0 7rem 4rem;
                 border-radius: 50% 0 0 50%;
@@ -159,22 +161,27 @@
 }
 
 .education-goal {
-    background: $color-quaternary;
-    .globalbtn-one{
-        background: transparent;
-    color: $color-tertiary;
-    border: 1px solid $color-tertiary;
-    text-transform: capitalize;
-    padding: 6px 16px;
-    display: inline-block;
-    text-decoration: none;
-    transition: .4s;
-    display: inline-block;
-    margin-top: 3rem;
-    &:hover{
-        background: $color-tertiary;
+    background-image: $gradientOne;
+    h2{
         color: $color-white;
     }
+
+    .globalbtn-one {
+        background: transparent;
+        color: $color-tertiary;
+        border: 1px solid $color-tertiary;
+        text-transform: capitalize;
+        padding: 6px 16px;
+        display: inline-block;
+        text-decoration: none;
+        transition: .4s;
+        display: inline-block;
+        margin-top: 3rem;
+
+        &:hover {
+            background: $color-tertiary;
+            color: $color-white;
+        }
     }
 
 

@@ -1,5 +1,5 @@
 .what-lumina {
-    background: $color-tertiary;
+    background: $color-primary;
 
     h2 {
         position: relative;
@@ -62,10 +62,11 @@
             .img-wrapper {
                 @include respond (minWidth768) {
                     width: 100%;
-                    @include respond (maxWidth992)
-{
-    height: 100%;
-}                }
+
+                    @include respond (maxWidth992) {
+                        height: 100%;
+                    }
+                }
 
                 @include respond (maxWidth768) {
                     width: 37.5rem;
@@ -98,7 +99,8 @@
     h2 {
         position: relative;
         text-align: right;
-        @include respond (maxWidth768){
+
+        @include respond (maxWidth768) {
             text-align: left;
         }
 
@@ -107,7 +109,8 @@
             transform: scale(0.7);
             position: relative;
             top: -2rem;
-            @include respond (maxWidth768){
+
+            @include respond (maxWidth768) {
                 transform: scale(0.5);
             }
         }
@@ -159,10 +162,10 @@
             .img-wrapper {
                 @include respond (minWidth768) {
                     width: 100%;
-                    @include respond (maxWidth992)
-                    {
+
+                    @include respond (maxWidth992) {
                         height: 100%;
-                    }  
+                    }
                 }
 
                 @include respond (maxWidth768) {
@@ -194,12 +197,11 @@
 }
 
 .our-beliefs {
-    background: $color-secondary;
 
-    .col-md-4{
-        &:not(:last-child){
-            @include respond (maxWidth768){
-                .card{
+    .col-md-4 {
+        &:not(:last-child) {
+            @include respond (maxWidth768) {
+                .card {
                     margin-bottom: 2rem;
                 }
             }
@@ -254,3 +256,11 @@
         }
     }
 }
+.link-wrapper.one {
+
+        a {
+            @include globalBtnTwo();
+            margin-top: 3rem;
+            text-align: center;
+        }
+    }

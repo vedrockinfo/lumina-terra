@@ -7,12 +7,13 @@
         @include respond (maxWidth992) {
             grid-template-columns: repeat(2, 1fr);
         }
+
         @include respond (maxWidth575) {
             grid-template-columns: repeat(1, 1fr);
         }
 
         .application-grid-item {
-            background: $color-quaternary;
+            background: $color-tertiary;
             aspect-ratio: 16 / 9;
             display: flex;
             align-items: center;
@@ -24,17 +25,19 @@
             position: relative;
 
             @include respond (maxWidth575) {
-            width: 300px;
-            margin: auto;
-            .heading-tertiary{
-                margin-top: 0;
-            }
-            @media screen and (max-width:320px) {
-                width: calc(100% - 2rem);
-            }
-        }
+                width: 300px;
+                margin: auto;
 
-           
+                .heading-tertiary {
+                    margin-top: 0;
+                }
+
+                @media screen and (max-width:320px) {
+                    width: calc(100% - 2rem);
+                }
+            }
+
+
 
             @include respond (minWidth992) {
                 &:not(:nth-child(3n)) {
@@ -68,7 +71,7 @@
                 }
             }
 
-             @media screen and (min-width:575.1px) and (max-width:991.9px) {
+            @media screen and (min-width:575.1px) and (max-width:991.9px) {
                 &:not(:nth-child(2n)) {
                     &::after {
                         content: "\f30b";
@@ -87,6 +90,8 @@
             &:last-child {
                 flex-direction: column;
                 gap: 1.5rem;
+                background: $color-white;
+                border-color: $color-tertiary;
 
                 .btnone a {
                     @include globalBtnThree();

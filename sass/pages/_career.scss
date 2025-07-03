@@ -1,0 +1,48 @@
+.chooselumina{
+    background-image: $gradientOne;
+    h2{
+        color: $color-white;
+    }
+    color: $color-white;
+    li{
+        &::before{
+            background: $color-white;
+        }
+    }
+}
+.popupArea{
+    .link-wrapper{
+            text-align: center;
+            margin-top: 3rem;
+            a{
+                @include globalBtnOne();
+            }
+        }
+}
+.vacancy-area{
+    table{
+        thead{
+            background: $color-primary;
+            color: $color-white;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        th, td{
+            font-size: 1.6rem;
+            text-align: center;
+            vertical-align: middle;
+        }
+        td{
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .detail-link{
+            text-align: center;
+            padding: 4px 10px;
+            span{
+                @include globalBtnOne();
+                cursor: pointer;
+            }
+        }
+    }
+}

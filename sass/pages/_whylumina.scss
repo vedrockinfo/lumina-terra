@@ -1,5 +1,5 @@
 .whylumina {
-    h2{
+    h2 {
         position: relative;
 
         &::after {
@@ -9,6 +9,7 @@
             transform: scale(0.75);
         }
     }
+
     .img-wrapper {
         width: 100%;
         position: relative;
@@ -28,6 +29,7 @@
             transform: scale(1.14);
             border-radius: 100%;
             z-index: -1;
+
             @include respond(minWidth575) {
                 transform: scale(1.07);
             }
@@ -45,29 +47,72 @@
         }
     }
 }
-.whyluminatwo{
-    background: $color-secondary;
+
+.whyluminatwo {
+    background-image: $gradientOne;
+    color: $color-white;
     @extend .whylumina;
-    .heading-primary{
-        &::after{
+
+    .heading-primary {
+        color: $color-white;
+        &::after {
             right: auto;
             left: -10rem;
             filter: invert(1) brightness(100);
         }
     }
-    .img-wrapper::before{
+
+    .img-wrapper::before {
         outline-color: $color-black;
     }
-    .internal-link{
+
+    .internal-link {
         color: $color-black;
     }
 }
-.whyluminathree, .whyluminafive{
+
+.whyluminathree,
+.whyluminafive {
     @extend .whylumina;
 }
-.whyluminafour{
+
+.whyluminafour {
     @extend .whyluminatwo;
 }
-.lumina-goals{
+
+.lumina-goals {
     @extend .lumina-hub;
+}
+.keyfeatiures, .global-practice{
+    ul.primary-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    margin: 0;
+    @include respond (maxWidth575){
+        grid-template-columns: repeat(1, 1fr);
+    }
+    gap: 15px;
+    li {
+    border: 2px solid;
+    margin-bottom: 0;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background: $color-primary;
+    color: $color-white;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 1.6rem;
+    &::before{
+        content: none!important;
+    }
+}
+}
+
 }

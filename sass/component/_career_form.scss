@@ -1,0 +1,203 @@
+.careerFormFrame{
+    iframe{
+        width: 100%;
+        height: 215rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .career-form-area {
+        margin-top: 3rem
+    }
+}
+
+.career-form-area textarea {
+    border: 1px solid #3f676f !important
+}
+
+.career-form-area .form-label {
+    margin-top: 1rem;
+    background: $color-primary;
+    color: #fff;
+    padding: 7px 20px;
+    display: inline-block
+}
+
+.career-form-area input[type="submit"]{
+        @include globalBtnTwo();
+    }
+
+.career-form-area .form-items {
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease
+}
+
+@media only screen and (max-width: 575px) {
+    .career-form-area .form-items {
+        min-width: 80%
+    }
+}
+
+.career-form-area h3 {
+    color: $color-primary;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px
+}
+
+@media only screen and (max-width: 575px) {
+    .career-form-area h3 {
+        font-size: 18px
+    }
+}
+
+.career-form-area h3.form-title {
+    margin-bottom: 30px
+}
+
+.career-form-area p {
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px
+}
+
+.career-form-area label,
+.career-form-area .was-validated .form-check-input:invalid~.form-check-label,
+.career-form-area .was-validated .form-check-input:valid~.form-check-label {
+    color: #fff;
+    font-size: 1.6rem
+}
+
+.career-form-area input[type=file]+label {
+    background: $color-primary;
+    padding: 1.5rem;
+    border-radius: 4rem;
+    width: 250px;
+    text-align: center;
+    margin-top: 3rem;
+    cursor: pointer
+}
+
+@media only screen and (max-width: 575px) {
+    .career-form-area input[type=file]+label {
+        padding: .6rem 1.5rem;
+        font-size: 1.4rem;
+        width: auto
+    }
+}
+
+.career-form-area input[type=text],
+.career-form-area input[type=password],
+.career-form-area input[type=email],
+.career-form-area input[type=date],
+.career-form-area select {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #3f676f;
+    display: block;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    margin-top: 16px;
+    color: rgba(63, 103, 111, .8)
+}
+
+@media only screen and (max-width: 575px) {
+
+    .career-form-area input[type=text],
+    .career-form-area input[type=password],
+    .career-form-area input[type=email],
+    .career-form-area input[type=date],
+    .career-form-area select {
+        padding: .5rem 1rem
+    }
+}
+
+.career-form-area input[type=text]::-webkit-input-placeholder,
+.career-form-area input[type=password]::-webkit-input-placeholder,
+.career-form-area input[type=email]::-webkit-input-placeholder,
+.career-form-area input[type=date]::-webkit-input-placeholder,
+.career-form-area select::-webkit-input-placeholder {
+    color: rgba(63, 103, 111, .8)
+}
+
+.career-form-area input[type=text]::-moz-placeholder,
+.career-form-area input[type=password]::-moz-placeholder,
+.career-form-area input[type=email]::-moz-placeholder,
+.career-form-area input[type=date]::-moz-placeholder,
+.career-form-area select::-moz-placeholder {
+    color: rgba(63, 103, 111, .8)
+}
+
+.career-form-area input[type=text]:-ms-input-placeholder,
+.career-form-area input[type=password]:-ms-input-placeholder,
+.career-form-area input[type=email]:-ms-input-placeholder,
+.career-form-area input[type=date]:-ms-input-placeholder,
+.career-form-area select:-ms-input-placeholder {
+    color: rgba(63, 103, 111, .8)
+}
+
+.career-form-area input[type=text]::-ms-input-placeholder,
+.career-form-area input[type=password]::-ms-input-placeholder,
+.career-form-area input[type=email]::-ms-input-placeholder,
+.career-form-area input[type=date]::-ms-input-placeholder,
+.career-form-area select::-ms-input-placeholder {
+    color: rgba(63, 103, 111, .8)
+}
+
+.career-form-area input[type=text]::placeholder,
+.career-form-area input[type=password]::placeholder,
+.career-form-area input[type=email]::placeholder,
+.career-form-area input[type=date]::placeholder,
+.career-form-area select::placeholder {
+    color: rgba(63, 103, 111, .8)
+}
+
+.career-form-area input[type=text]:focus,
+.career-form-area input[type=password]:focus,
+.career-form-area input[type=email]:focus,
+.career-form-area input[type=date]:focus,
+.career-form-area select:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important
+}
+
+.career-form-area textarea {
+    position: static !important;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid #3f676f;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(63, 103, 111, .8);
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+    margin-top: 16px
+}
+
+.career-form-area textarea:hover,
+.career-form-area textarea:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #3f676f
+}

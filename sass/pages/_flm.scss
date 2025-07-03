@@ -3,6 +3,7 @@
         display: grid;
         grid-template-columns: 35% 30% 35%;
         grid-auto-rows: 380px;
+
         @include respond (maxWidth992) {
             grid-template-columns: 1fr;
             grid-auto-rows: auto;
@@ -38,6 +39,7 @@
     .gridEight,
     .gridNine {
         position: absolute;
+
         @include respond (maxWidth992) {
             position: static;
             margin-bottom: 20px;
@@ -59,6 +61,7 @@
     .gridTwo {
         top: 25%;
         left: 0;
+
         .wrapper {
             &::after {
                 transform: skewY(1deg);
@@ -69,6 +72,7 @@
     .gridThree {
         top: 50%;
         left: 0;
+
         .wrapper {
             &::after {
                 transform: skewY(-5deg);
@@ -80,6 +84,7 @@
     .gridFour {
         bottom: 0;
         left: 0;
+
         .wrapper {
             &::after {
                 transform: skewY(-10deg);
@@ -91,6 +96,7 @@
     .gridSix {
         top: 0;
         right: 0;
+
         .wrapper {
             &::after {
                 transform: skewY(-10deg);
@@ -102,9 +108,11 @@
     .gridSeven {
         top: 25%;
         right: 0;
+
         @include respond (maxWidth1200) {
             top: 32%;
         }
+
         .wrapper {
             &::after {
                 transform: skewY(-1deg);
@@ -115,9 +123,11 @@
     .gridEight {
         top: 50%;
         right: 0;
+
         @include respond (maxWidth1200) {
             top: 58%;
         }
+
         .wrapper {
             &::after {
                 transform: skewY(-5deg);
@@ -129,6 +139,7 @@
     .gridNine {
         bottom: 0;
         right: 0;
+
         .wrapper {
             &::after {
                 transform: skewY(10deg);
@@ -148,14 +159,16 @@
             padding: 50px;
             text-align: center;
             background: var(--fcsclr);
+
             @include respond (maxWidth1200) {
                 width: 250px;
                 margin: 0 auto 50px;
             }
+
             @media screen and (max-width: 260px) {
                 width: 80%;
                 padding: 20px;
-                
+
             }
 
             .icon {
@@ -192,20 +205,25 @@
         width: 350px;
         position: relative;
         transition: all 0.3s ease-in-out;
+
         @include respond (maxWidth1200) {
             width: 270px;
         }
+
         @include respond (maxWidth992) {
             width: 100%;
             padding: 10px;
             margin: 0 auto;
         }
+
         &:hover {
             background: var(--fcsclr);
-            .content{
+
+            .content {
                 color: $color-white;
             }
-            .icon{
+
+            .icon {
                 border-color: $color-white;
             }
         }
@@ -217,6 +235,7 @@
             width: 90%;
             position: absolute;
             z-index: -1;
+
             @include respond (maxWidth992) {
                 display: none;
             }

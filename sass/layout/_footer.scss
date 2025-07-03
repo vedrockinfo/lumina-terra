@@ -1,31 +1,96 @@
 footer {
-    background: $color-secondary;
+    // background: $color-secondary;
     position: relative;
-
-    .footer-logo {
-        text-align: center;
-
-        img {
-            width: 25rem;
-            margin: 0 auto 2rem auto;
-            filter: invert(1) sepia(1) brightness(100);
+    @include respond (maxWidth768){
+        .row{
+            row-gap: 2rem;
         }
     }
 
-    .footer-text {
-        @include respond (minWidth768) {
-            padding: 0 10rem;
-        }
+    .footer-contact{
+        list-style: none;
+        li.footer-contact-item {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 0;
+    gap: 1rem;
+    i{
+        font-size: 20px;
+    padding-top: 8px;
+    }
+    a{
+        text-decoration: none;
+        color: $color-text;
+    }
+}
+    }
 
-        p {
-            text-align: center;
+    .footer-widgets {
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: $fontPrimary;
+        color: $color-text;
+        position: relative;
+        margin-bottom: 3rem;
+
+        &::before {
+            content: "";
+            background: $color-text;
+            height: 3px;
+            width: 80%;
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
         }
     }
 
     .footer-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            text-transform: capitalize;
+
+            a {
+                text-decoration: none;
+                color: $color-text;
+                display: block;
+                padding-left: 1rem;
+                transition: all 0.4s;
+
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+
+                &:hover {
+                    background: lighten($color-primary, 58);
+                }
+            }
+
+            &:not(:last-child) {
+                a {
+                    border-bottom: 1px solid rgba($color-text, $alpha: 0.3);
+                }
+            }
+        }
+    }
+
+    .footer-logo {
+
+        img {
+            width: 25rem;
+            margin: 0 auto 2rem auto;
+            // filter: invert(1) sepia(1) brightness(100);
+        }
+    }
+
+
+
+    .footer-links {
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             gap: 2rem;
             margin: 0;
@@ -34,30 +99,30 @@ footer {
 
             li {
                 a {
-                    color: $color-text;
-                    text-decoration: none;
-
-                    &:hover {
-                        color: $color-primary;
-                    }
+                    @include globalBtnTwo();
+                    text-align: center;
                 }
             }
         }
     }
 
     .footer-social {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        z-index: 9;
+
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            gap: 2rem;
-        margin: 0;
-        padding: 0;
+            gap: 1rem;
+            margin: 2rem 0 0 0;
+            padding: 0 0 0 1.5rem;
             list-style: none;
+
+            .whtap {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                z-index: 9;
+            }
 
             li {
                 a {
@@ -67,13 +132,34 @@ footer {
                     width: 43.93px;
                     border-radius: 100%;
                     place-content: center;
-                    font-size: 2.6rem;
+                    font-size: 2rem;
                     text-decoration: none;
 
                     i {
                         color: $color-white;
                     }
                 }
+            }
+        }
+    }
+    .bottom-footer{
+        background: $color-primary;
+        text-align: center;
+        color: $color-white;
+        padding: 2rem 0;
+        p{
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        a{
+            transition: all 0.4s;
+            color: $color-white;
+            text-decoration: none;
+            font-weight: 500;
+            display: none;
+            &:hover{
+                text-decoration: underline;
+                text-underline-position: below;
             }
         }
     }
