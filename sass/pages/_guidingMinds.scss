@@ -8,6 +8,12 @@
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             position: relative;
 
+            @include respond (maxWidth768) {
+                height: auto;
+                width: 30rem;
+                margin: 0 auto;
+            }
+
 
             img {
                 height: 100%;
@@ -77,11 +83,169 @@
 }
 
 .advisoryboard {
+    .row{
+            &:last-child{
+                row-gap: 2rem;
+            }
+        }
+    .galvniser-grid {
+        display: flex;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        background: $color-white;
+        align-items: flex-start;
+        background-image: linear-gradient(to right,
+                rgba($color-primary, 0.2) 30%,
+                transparent 30%,
+            );
+
+        @include respond (maxWidth992) {
+            display: block;
+            background-image: none;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            background-image: linear-gradient(to right,
+                    transparent 70%,
+                    rgba($color-primary, 0.2) 70%);
+                    @include respond (maxWidth992){
+                        background-image: none;
+                    }
+        }
+
+        .galvniser-pic {
+            @media screen and (min-width:1399.9px) {
+                height: 43rem;
+                img{
+                    object-fit: cover!important;
+                    object-position: top!important;
+                }
+            }
+            @include respond (minWidth992) {
+                flex: 0 0 30%;
+                max-width: 30%;
+                align-self: flex-end;
+            }
+
+            .img-wrapper {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                @include respond (maxWidth992) {
+                    margin: 3rem auto 0;
+                    position: relative;
+                    max-width: 280px;
+                    max-height: 280px;
+                    background: transparent;
+
+                    &::before {
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 2;
+                        content: "";
+                        position: absolute;
+                        border-radius: 50%;
+                        background-color: #ff2c9c;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &::after {
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        z-index: 1;
+                        content: "";
+                        position: absolute;
+                        border-radius: 65% 35% 70% 30% / 64% 31% 69% 36%;
+                        background-color: #ffac00;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                        display: inline-block !important;
+                        max-height: inherit;
+                        z-index: 3;
+                        position: relative;
+                        object-position: top;
+                        object-fit: cover;
+                        background: rgba($color-primary, 1);
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    // padding: 1rem 1rem 0;
+                }
+            }
+        }
+
+        .galvniser-data {
+            @include respond (minWidth992) {
+                flex: 0 0 70%;
+                max-width: 70%;
+            }
+
+            padding: 3rem;
+
+            @include respond (minWidth992) {
+                padding: 3rem;
+            }
+
+            .heading-tertiary {
+                text-align: left;
+                color: rgba($color-primary, 1);
+                font-size: 2.4rem;
+                margin-top: 0;
+                margin-bottom: 1rem;
+                text-transform: capitalize;
+            }
+
+            .designation {
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $color-text;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+                padding: 0.5rem 1rem;
+                border-top: 1px solid;
+                border-bottom: 1px solid;
+            }
+
+            .btn {
+                @include globalBtnTwo();
+                font-size: 1.6rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+
     .advisory-members {
         background: $color-white;
         text-align: center;
-        border-radius: 140px 140px 80px 80px;
-        height: 40rem;
+        border-radius: 1.6rem;
+        @include respond (minWidth768){
+            height: 44rem;
+        }
         background: radial-gradient(circle at 30% 30%, #ffffff, rgba($color-primary, 0.2));
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         border-top: 5rem solid $color-primary;
@@ -109,11 +273,51 @@
             color: $color-primary;
             border-bottom: 2px solid $color-primary;
         }
-        .designation{
+
+        .designation {
             color: $color-text;
             margin-top: .5rem;
             font-size: 1.6rem;
             padding: 0 4rem;
+        }
+    }
+
+    .modal-content {
+        height: 95vh;
+        overflow: auto;
+
+        .modal-header {
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .modal-body {
+            text-align: left;
+
+            .principal-pic {
+                text-align: center;
+                position: relative;
+                z-index: 2;
+                margin-right: auto;
+                margin-left: auto;
+                max-height: 30rem;
+                padding-right: 2rem;
+                width: 30rem;
+                float: left;
+                margin-top: 2rem;
+
+                img {
+                    border-radius: 1.6rem;
+                    display: inline-block;
+                    width: 100%;
+                    max-height: inherit;
+                    object-position: top;
+                    background: rgba($color-primary, 1);
+                    object-fit: cover;
+                }
+            }
         }
     }
 }

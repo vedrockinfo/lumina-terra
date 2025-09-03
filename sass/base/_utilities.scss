@@ -53,8 +53,9 @@
 
     button {
         background: $color-primary !important;
-        height: 30px;
-        width: 30px;
+        height: 4rem;
+        width: 4rem;
+        box-shadow: 0 3px #295f2e;
 
         i {
             color: $color-white;
@@ -90,7 +91,8 @@
         width: 100%;
         object-position: bottom;
         object-fit: cover;
-        @include respond (maxWidth768){
+
+        @include respond (maxWidth768) {
             height: 30rem;
         }
     }
@@ -168,6 +170,30 @@ input:-webkit-autofill {
     }
 }
 
+.sub-primary-list {
+    list-style: none;
+    margin-top: 1rem;
+    li {
+        position: relative;
+
+        &::before {
+            content: "";
+            background: $color-text;
+            position: absolute;
+            left: -2rem;
+            top: 15px;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 1px;
+            border-radius: 0;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+        }
+    }
+}
+
 .modal-backdrop {
     z-index: 9;
 }
@@ -186,9 +212,9 @@ blockquote {
     display: block;
     background: #fff;
     padding: 15px 20px 15px 45px;
-    margin: 3rem 0 0 ;
+    margin: 3rem 0 0;
     position: relative;
-    font-size: 1.8rem!important;
+    font-size: 1.8rem !important;
     line-height: 1.4;
     color: #666;
     text-align: justify;
@@ -222,10 +248,47 @@ blockquote {
         margin-left: auto;
         margin-top: 1.5rem;
         padding: 8px 20px;
-        &::before{
+
+        &::before {
             content: "~";
             display: inline-block;
             margin-right: 3px;
         }
+    }
+}
+
+.download-brochure {
+    a {
+        position: fixed;
+        @include respond (maxWidth768){
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 -3px #295f2e;
+        }
+        @include respond (minWidth768) {
+            left: 20px;
+            top: 50%;
+            transform: translateY(100%) rotate(-90deg);
+            transform-origin: left center;
+        }
+
+        z-index: 9;
+        cursor: pointer;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        background: $color-primary;
+        color: $color-white;
+        box-shadow: 0 3px #295f2e;
+        border-radius: 3px;
+        font-size: 14px;
+        transition: all .4s;
+        padding: 0 2rem;
+        text-decoration: none;
+        height: 40px;
+        text-transform: uppercase;
+        display: grid;
+        place-content: center;
+        font-weight: 600;
     }
 }

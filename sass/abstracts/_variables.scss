@@ -1,11 +1,13 @@
 // COLORS
 $color-primary: #38833f;
 $color-secondary:#41c3db;
-$color-tertiary:#ffd367;
+$color-tertiary:#38833f;
 $color-text:#221f20;
 $color-white:#ffffff;
 $color-cream: #FDF6EC;
 $color-black: #000;
+
+$transition: all 0.3s ease-in-out; 
 
 $gradientOne:linear-gradient(-45deg, lighten($color-primary, 20), darken($color-primary, 15));
 

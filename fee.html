@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="vendor/css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* .marq-area marquee{
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            color: red;
+            line-height: 1;
+        } */
+        .marq-area p {
+            font-weight: 700;
+            font-size: 24px;
+            padding: 0;
+            color: #38833f;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        @media screen and (min-width:1200px) {
+            .marq-area p{
+                padding: 0 150px;
+            }
+        }
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGTE0P6J62"></script>
     <script>
@@ -34,7 +56,7 @@
 </head>
 
 <body>
-    <header>
+     <header>
         <div class="container">
             <nav>
                 <div class="left-side">
@@ -51,12 +73,23 @@
                     <ul class="nav-list">
                         <li class="mobile-logo"><a href="index.html"><img src="images/logo.png" alt=""
                                     class="img-fluid logo"></a></li>
-                        <li class="nav-item"><a href="about-us.html" class="nav-link">about us</a></li>
-                        <li class="nav-item"><a href="why-lumina.html" class="nav-link">why lumina Terra?</a></li>
-                        <li class="nav-item"><a href="career.html" class="nav-link">career</a></li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">about</a>
+                            <ul class="dropdown">
+                                <li class="nav-item"><a href="about-us.html" class="nav-link">about us</a></li>
+                                <li class="nav-item"><a href="guiding-minds.html" class="nav-link">guiding minds</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="why-lumina.html" class="nav-link">LT difference</a></li>
+
+                        <li class="nav-item"><a href="curriculum.html" class="nav-link">curriculum</a></li>
+                        <li class="nav-item"><a href="campus.html" class="nav-link">campus</a></li>
                         <li class="nav-item"><a href="program.html" class="nav-link">program</a></li>
-                        <li class="nav-item"><a href="guiding-minds.html" class="nav-link">guiding minds</a></li>
-                        <li class="nav-item"><a href="fee.html" class="nav-link">fee</a></li>
+                        <li class="nav-item"><a href="fee.html" class="nav-link">Fee structure & uniform</a></li>
+                        <li class="nav-item"><a href="career.html" class="nav-link">career</a></li>
+                        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+                        <li class="nav-item"><a href="blogs-articles.html" class="nav-link">Blogs & Articles</a></li>
                         <li class="nav-item"><a href="contact-us.html" class="nav-button">contact us</a></li>
                     </ul>
                 </div>
@@ -65,88 +98,88 @@
     </header>
     <main>
         <section class="inner-hero-section">
-            <img src="images/fee-01.jpeg" alt="" class="img-fluid">
-            <h1>Admission Fee Bifurcation</h1>
+            <img src="images/fee-01.jpg" alt="" class="img-fluid">
+            <h1>One time fee at the time of Admission</h1>
+        </section>
+        <section class="marq-area m-top">
+            <!-- <marquee behavior="" direction="left" loop="" onmouseover="this.stop();" onmouseout="this.start();">
+                
+            </marquee> -->
+            <div class="container">
+                <p class="text-center">Concessions available for the first year. Kindly visit our campus for detailed information.</p>
+            </div>
         </section>
         <section class="fee-structure m-top">
             <div class="container">
-                <p>(One-time fee &dash; <i class="fa-solid fa-indian-rupee-sign"></i> 45,000 refundable security deposit included)</p>
+                <!-- <p>(One-time fee &dash; <i class="fa-solid fa-indian-rupee-sign"></i> 45,000 refundable security deposit included)</p> -->
                 <div class="table-wrapper">
                     <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Component</th>
-                            <th>Purpose/Details</th>
-                            <th>Amount (INR)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Security Deposit (Refundable)</td>
-                            <td>Caution money; refundable when the child leaves the school</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 45,000</td>
-                        </tr>
-                        <tr>
-                            <td>Infrastructure Maintenance Fee</td>
-                            <td>Upgradation and maintenance of labs, classrooms, smart boards, library and play areas
-                            </td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 20,000</td>
-                        </tr>
-                        <tr>
-                            <td>Technology Fee</td>
-                            <td>Smart class setup, student portal, Story Creators App and AI Apps</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 10,000</td>
-                        </tr>
-                        <tr>
-                            <td>Learning Material and Resource Fee</td>
-                            <td>Welcome kit, academic stationery, folders, handbook, orientation materials</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 10,000</td>
-                        </tr>
-                        <tr>
-                            <td>Lumina Edge &dash; Personalized Learning Support Program</td>
-                            <td>Individual learning support sessions, progress tracking, behavioral guidance</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 15,000</td>
-                        </tr>
-                        <tr>
-                            <td>Co-Curricular Activity Setup</td>
-                            <td>Setup for music, art, dance, sports, house activities, life skills sessions</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 12,000</td>
-                        </tr>
-                        <tr>
-                            <td>Safety Infrastructure Fee</td>
-                            <td>CCTV and access control setup</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 13,000</td>
-                        </tr>
-                        <tr>
-                            <td>Admission Processing Fee</td>
-                            <td>Application review, documentation, assessment, and onboarding admin tasks</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 10,000</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">Total</td>
-                            <td><i class="fa-solid fa-indian-rupee-sign"></i> 1,35,000</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>One time fee at the time of Admission</th>
+                                <th>Amount (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Security Deposit (Refundable)</td>
+                                <td>Caution money; refundable when the child leaves the school</td>
+                                <td>45,000</td>
+                            </tr>
+                            <tr>
+                                <td>Infrastructure Maintenance Fee</td>
+                                <td>Upgradation and maintenance of labs, classrooms, smart boards, library and play
+                                    areas</td>
+                                <td>20,000</td>
+                            </tr>
+                            <tr>
+                                <td>Technology Fee</td>
+                                <td>Smart class setup, student portal, Story Creators App, AI Apps, BeeBot and other
+                                    applications</td>
+                                <td>16,000</td>
+                            </tr>
+                            <tr>
+                                <td>Learning Material and Resource Fee</td>
+                                <td>Welcome kit, academic stationery, handbook, orientation materials</td>
+                                <td>15,000</td>
+                            </tr>
+                            <tr>
+                                <td>Lumina Edge &dash; Personalized Learning Support Program</td>
+                                <td>Individual learning support sessions, progress tracking, behavioral guidance</td>
+                                <td>15,000</td>
+                            </tr>
+                            <tr>
+                                <td>Co-Curricular Activity Setup</td>
+                                <td>Setup for music, art, dance, sports, house activities, life skills sessions</td>
+                                <td>12,000</td>
+                            </tr>
+                            <tr>
+                                <td>Admission Processing Fee</td>
+                                <td>Application review, documentation, assessment, and onboarding </td>
+                                <td>12,000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center;">Total</td>
+                                <td>1,35,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="content-wrapper m-top">
-                    <h6 class="heading-tertiary">Key Notes for Parents &dash; Lumina Terra School</h6>
+                    <!-- <h6 class="heading-tertiary">Key Notes for Parents</h6>
                     <ul class="primary-list">
                         <li>The Security Deposit of <i class="fa-solid fa-indian-rupee-sign"></i> 45,000 is fully refundable at the time of
-                            withdrawal, subject to clearance of all dues and return of school property
-                            in good condition.
+withdrawal, subject to clearance of all dues and return of school property in good condition.</li>
+                        <li>The <i class="fa-solid fa-indian-rupee-sign"></i> 90,000 is a one-time, non-refundable admission fee, separate from the annual tuition and transportation.</li>
+                        <li>This investment supports a safe, technologically advanced, and personalized learning environment, with infrastructure, resources, and support systems designed to nurture holistic development.
                         </li>
-                        <li>The <i class="fa-solid fa-indian-rupee-sign"></i> 90,000 is a one-time, non-refundable admission fee, separate from
-                            the annual tuition and transportation.</li>
-                        <li>This investment supports a safe, technologically advanced, and
-                            personalized learning environment, with infrastructure, resources, and
-                            support systems designed to nurture holistic development.
-                        </li>
-                    </ul>
+                    </ul> -->
                     <div class="border-one"></div>
-                    <h6 class="heading-tertiary">Quarterly Fee Payment Schedule</h6>
+                    <h6 class="heading-tertiary">Quarterly Fee</h6>
                     <ul class="primary-list">
-                        <li>Quarterly fees of <i class="fa-solid fa-indian-rupee-sign"></i> 90000 are due on the 1<sup>st</sup> of the beginning month of
+                        <li>Quarterly fees of <i class="fa-solid fa-indian-rupee-sign"></i> 90000 are due on the
+                            1<sup>st</sup> of the beginning month of
                             each quarter.</li>
                         <li>A grace period until the 10<sup>th</sup> of the same month will be provided to
                             complete the payment without penalty.</li>
@@ -164,42 +197,80 @@
                         <tbody>
                             <tr>
                                 <td>April &dash; June</td>
-                                <td>1<sup>st</sup> March</td>
-                                <td>10<sup>th</sup> March</td>
+                                <td>1<sup>st</sup> April</td>
+                                <td>10<sup>th</sup> April</td>
                             </tr>
                             <tr>
                                 <td>July &dash; September</td>
-                                <td>1<sup>st</sup> June</td>
-                                <td>10<sup>th</sup> June</td>
+                                <td>1<sup>st</sup> July</td>
+                                <td>10<sup>th</sup> July</td>
                             </tr>
                             <tr>
                                 <td>October &dash; December </td>
-                                <td>1<sup>st</sup> September</td>
-                                <td>10<sup>th</sup> September</td>
+                                <td>1<sup>st</sup> October</td>
+                                <td>10<sup>th</sup> October</td>
                             </tr>
                             <tr>
                                 <td>January &dash; March</td>
-                                <td>1<sup>st</sup> December</td>
-                                <td>10<sup>th</sup> December</td>
+                                <td>1<sup>st</sup> January</td>
+                                <td>10<sup>th</sup> January</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="content-wrapper">
-                    <ul class="primary-list">
-                        <li>A late fee of <i class="fa-solid fa-indian-rupee-sign"></i> 9,000 will be applicable if the payment is made after the 10<sup>th</sup> of the due month.
-                        </li>
-                        <li>If the payment is not received by the 30<sup>th</sup> of the due month, a readmission fine of <i class="fa-solid fa-indian-rupee-sign"></i> 18,000 will be levied, and the student’s name may be temporarily removed from the school rolls.</li>
-                    </ul>
+                    <!-- <ul class="primary-list">
+                        <li>A late fee of <i class="fa-solid fa-indian-rupee-sign"></i> 500 per day will be applicable if the payment is made after the 10<sup>th</sup> of the due month.</li>
+                        <li>If the payment is not received by the 30<sup>th</sup> of the due month, a readmission fine of <i class="fa-solid fa-indian-rupee-sign"></i> 15,000 will be levied, and the student’s name may be temporarily removed from the school rolls.</li>
+                    </ul> -->
+                </div>
+                <div class="m-top">
+                    <h1 class="uniform-head">Uniform</h1>
+                </div>
+                <div class="uniform-table">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>CASUAL WEAR</th>
+                                <th>FORMAL WEAR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong class="d-block">Boys & Girls</strong>
+                                    <ul>
+                                        <li><strong>Top :</strong> Light green kurta with school logo on the neckline.</li>
+                                        <li><strong>Bottom :</strong> White khadi trousers.</li>
+                                        <li><strong>Footwear :</strong> Comfortable white shoes with Velcro (from Bata), plain socks (white)</li>
+                                    </ul>
+                                </td>
+                                <td><strong class="d-block">Boys</strong>
+                                    <ul>
+                                        <li><strong>Top :</strong> White inner shirt with green-and-white checkered waistcoat with the school logo.</li> 
+                                        <li><strong>Bottom :</strong> Green-and-white checkered shorts.</li>
+                                        <li><strong>Footwear :</strong> Comfortable white shoes with Velcro (from Bata) and plain white socks.</li>
+                                    </ul></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><strong class="d-block">Girls</strong>
+                                    <ul>
+                                        <li><strong>Top :</strong> White inner blouse with green-and-white checkered tunic with the school logo.</li> 
+                                        <li><strong>Bottom :</strong> White shorts underneath the dress for comfort.</li>
+                                        <li><strong>Footwear :</strong> Comfortable white shoes with Velcro (from Bata) and plain white socks.</li>
+                                    </ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="p-top">
+     <footer class="p-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <div class="footer-logo">
                         <img src="images/logo.png" alt="" class="img-flui">
                     </div>
@@ -216,14 +287,15 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <h4 class="footer-widgets">quick links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">home</a></li>
                         <li><a href="about-us.html">about us</a></li>
-                        <li><a href="program.html">program</a></li>
+                        <li><a href="curriculum.html">curriculum</a></li>
                         <li><a href="career.html">career</a></li>
                         <li><a href="guiding-minds.html">guiding minds</a></li>
+                        <li><a href="https://lumina-terra.web.app/" target="_blank">Online Admission Form</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -252,17 +324,18 @@
                     </ul>
                     <div class="footer-social">
                         <ul>
-                            <li><a href="" target="_blank" style="--fclr:#557dbc;">
+                            <li><a href="https://www.facebook.com/profile.php?id=61578070859177&mibextid=rS40aB7S9Ucbxw6v"
+                                    target="_blank" style="--fclr:#557dbc;">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a></li>
                             <li class="whtap"><a href="https://wa.me/917408405000" target="_blank"
                                     style="--fclr:#29a71a;">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a></li>
-                            <li><a href="" target="_blank" style="--fclr:#03a9f4;">
+                            <!-- <li><a href="" target="_blank" style="--fclr:#03a9f4;">
                                     <i class="fa-brands fa-twitter"></i>
-                                </a></li>
-                            <li><a href="" target="_blank"
+                                </a></li> -->
+                            <li><a href="https://www.instagram.com/luminaterra_lucknow/" target="_blank"
                                     style="--fclr:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a></li>
@@ -273,9 +346,20 @@
         </div>
         <div class="bottom-footer m-top">
             <div class="container">
-                <p>© 2025 by Lumina Terra School of Nations | <a href="terms-of-use.html">Terms of Use</a> | <a
-                        href="privacy-policy.html">Privacy Policy</a></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>© 2025 by Lumina Terra School of Nations</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="privacy-policy">
+                            <li><a href="privay-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="download-brochure">
+            <a href="pdf/Lumina-Terra-Prospectus-2_2025-26.pdf" target="_blank">Our Prospectus</a>
         </div>
     </footer>
 

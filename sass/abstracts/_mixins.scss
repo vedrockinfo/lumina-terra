@@ -27,7 +27,6 @@
 
 @mixin vector($width: 630px, $height: 624px){
     content: "";
-    background-image: url(../images/vector-icon-01.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: $width;
@@ -114,4 +113,29 @@
 }
 @mixin submitbutton{
     @include globalBtnTwo;
+}
+
+@mixin borderRadius{
+        overflow: hidden;
+        border-radius: 100%;
+        outline: 1rem solid #38833f;
+        border: 0.8rem solid #fff;
+        margin: 3rem auto 0;
+
+        @include respond (maxWidth575) {
+            transform: scale(0.8);
+        }
+
+        background: #38833f;
+        padding: 1rem;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        transform: scale(0.95);
+        margin-top: 3rem;
+
+        img {
+            transition: $transition;
+            border-radius: 100%;
+            height: 100%;
+        }
 }

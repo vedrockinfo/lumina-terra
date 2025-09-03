@@ -1,0 +1,157 @@
+.blog-section {
+    .row{
+        row-gap: 7rem;
+        @include respond (maxWidth768){
+            row-gap: 1.5rem;
+        }
+    }
+    .article-box {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        @include respond (minWidth768){
+            height: calc(100% + 5rem);
+        }
+        position: relative;
+        .img-wrapper {
+            position: relative;
+            @include borderRadius();
+            transform: scale(0.8);
+
+            .cat {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $color-primary;
+                color: $color-white;
+                border-radius: 100%;
+                width: 100px;
+                height: 70px;
+                padding-top: 10px;
+                display: flex;
+                justify-content: center;
+                font-weight: 700;
+                text-transform: uppercase;
+                @include respond (maxWidth768){
+                    bottom: -26px;
+                }
+            }
+        }
+
+        .content-wrapper {
+            padding: 2rem;
+            .meta {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                font-size: 12px;
+                line-height: 1.2;
+                color: rgba($color-text, $alpha: 0.7);
+                height: 39px;
+                .date {
+                    & + .writter {
+                    text-align: right;
+                }
+                }
+
+                .publish {
+                    grid-column: span 2;
+                    text-align: center;
+                }
+            }
+
+            .heading-tertiary {
+                border-bottom: 1px solid rgba($color-text, $alpha: 0.2);
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-wrapper {
+                text-align: center;
+                margin-top: 3rem;
+                position: absolute;
+                bottom: 3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                @include respond (maxWidth768){
+                    position: static;
+                    margin-bottom: 0;
+                    transform: none;
+                }
+                a {
+                     @include globalBtnOne();
+                }
+            }
+        }
+    }
+}
+.published {
+    font-size: 14px;
+    padding: 1rem 3rem;
+    border-top: 1px solid rgba($color-text, $alpha: 0.2);
+    border-bottom: 1px solid rgba($color-text, $alpha: 0.2);
+    margin-bottom: 2rem;
+    display: block;
+    color: $color-white;
+    background: $color-primary;
+
+    a {
+        color: $color-white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+.single-blog{
+    .heading-tertiary{
+        text-align: left;
+    }
+    .read-at{
+        color: $color-primary;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+}
+
+.blog-sidebar {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: sticky;
+  top: 8rem;
+  padding: 1rem 2rem 2rem;
+    .heading-tertiary {
+      text-align: center;
+      margin-bottom: 0;
+      text-transform: capitalize;
+    }
+    .border-one{
+      background: $color-primary;
+      width: 5rem;
+      margin-top: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .recent-post {
+
+            a {
+                color: $color-primary;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            .meta {
+              font-size: 1.2rem;
+              font-weight: normal;
+              color: rgba($color-text, $alpha: 0.5);
+              border-top: 1px solid;
+              padding-top: 0.5rem;
+            }
+
+            .meta-publish {font-size: 1.2rem;
+              font-weight: normal;
+              color: rgba($color-text, $alpha: 0.5); text-align: right;margin-bottom: 0;border-top: 1px solid;}
+
+
+            em {font-size: 1.2rem;
+              font-weight: normal;
+              color: rgba($color-text, $alpha: 0.5); text-align: right;display: block;border-bottom: 1px solid;}
+        }
+}

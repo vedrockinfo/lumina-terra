@@ -1,3 +1,14 @@
+.bg-video {
+    height: 100%;
+    width: 100%;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 .leaf-hold {
     &.bg-1 {
         background-image: $gradientOne;
@@ -11,6 +22,14 @@
 
 .sustainable-area {
     overflow-x: hidden;
+
+    blockquote {
+        @include respond (minWidth768) {
+            width: 70rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 
     .btn-wrapper {
         margin-top: 3rem;
@@ -355,7 +374,8 @@
                 text-align: center;
                 border-top: 1px solid rgba($color-text, 0.1);
                 padding-top: 1rem;
-                @include respond (minWidth768){
+
+                @include respond (minWidth768) {
                     height: 165px;
                 }
             }
@@ -465,29 +485,275 @@
 
 }
 
-.sus-campus {
-    background: url(../images/map-bg-01.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
+.world-bank {
+    background: rgba($color-primary, 0.2);
+    position: relative;
+
+    @include respond (maxWidth575) {
+        padding-bottom: 3rem;
+    }
 
     .campus-grid {
         width: 35rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
 
-        @include respond (minWidth992) {
+        @include respond (maxWidth575) {
+            position: static;
+            transform: none;
+            width: 100%;
+            padding: 3rem 2rem 0;
+        }
+
+
+        @include respond (minWidth575) {
             margin-left: 7rem;
+            height: 100%;
         }
 
         .content-wrapper {
-            background: rgba($color-primary, 0.5);
-            padding: 14rem 3rem;
+            background: rgba($color-primary, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            // border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            display: grid;
+            place-content: center;
             text-align: center;
+            height: 100%;
+            padding: 14rem 3rem;
+
+            @media screen and (min-width:575px) and (max-width:768px) {
+                padding: 6rem 3rem;
+            }
+
+            @include respond (maxWidth575) {
+                padding: 5rem 3rem;
+            }
 
             h2 {
                 margin-bottom: 2rem;
                 color: rgba($color-text, 1);
             }
         }
+    }
+}
+
+.stages-ages {
+    .row {
+        @include respond (maxWidth768) {
+            row-gap: 2rem;
+        }
+    }
+
+    // .img-wrapper {
+    //     width: 100%;
+    //     height: 100%;
+    //     position: relative;
+    //     overflow: hidden;
+    //     border-radius: 1rem;
+
+    //     img {
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: cover;
+    //         object-position: center;
+    //         border-radius: inherit;
+    //         aspect-ratio: 16 / 10.7;
+    //         transition: $transition;
+    //     }
+
+    //     &::before {
+    //         content: "";
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         background-color: rgba($color-black, 0);
+    //         z-index: 1;
+    //         transition: $transition;
+    //     }
+
+    //     &:hover {
+    //         img {
+    //             transform: scale(1.05);
+    //         }
+
+    //         &::before {
+    //             background-color: rgba($color-black, 0.3);
+    //         }
+    //     }
+    // }
+
+    .img-wrapper{
+        @include borderRadius();
+    }
+}
+
+.rounded-education {
+    .row {
+        @include respond (maxWidth768) {
+            row-gap: 2rem;
+        }
+    }
+
+    .img-wrapper-brd {
+        border-radius: 100%;
+        outline: 1rem solid #38833f;
+        border: 1rem solid #fff;
+        background: #38833f;
+        padding: 20px;
+        aspect-ratio: 1 / 1;
+
+        img {
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+            -o-object-position: 68% 100%;
+            object-position: 68% 100%;
+        }
+    }
+
+    .circular-card {
+        border-radius: 1.6rem;
+        overflow: hidden;
+        background: lighten($color-primary, 60);
+        height: 100%;
+        position: relative;
+
+        &:hover {
+            .img-wrapper {
+                img {
+                    transform: rotate(-2deg);
+                }
+            }
+        }
+
+        .img-wrapper {
+            @include borderRadius();
+            width: 46rem;
+        }
+
+        .content-wrapper {
+            padding: 2rem;
+
+            .heading-tertiary {
+                margin-bottom: 1rem;
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.immediate-access {
+    .access-card {
+        overflow: hidden;
+        background: lighten($color-primary, 60);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 1rem 0.5rem 3rem 0.5rem;
+        position: relative;
+        border-radius: 1.6rem;
+        transition: $transition;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: rgba($color-primary, 1);
+            z-index: 2;
+            transition: $transition;
+        }
+
+        &:hover {
+            border-radius: 0;
+
+            &::before {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            height: 438px;
+        }
+
+        @include respond (minWidth1200) {
+            height: 68rem;
+        }
+
+        // .img-wrapper {
+        //     overflow: hidden;
+        //     position: relative;
+        //     border-radius: 1.6rem;
+
+        //     span {
+        //         position: absolute;
+        //         top: 1rem;
+        //         left: 0;
+        //         background: $gradientOne;
+        //         color: $color-white;
+        //         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        //         text-shadow: 1px 1px 2px rgba($color-black, 0.5);
+        //         padding: 0.5rem 2rem 0.5rem 1rem;
+        //         font-weight: bold;
+        //         font-size: 1.4rem;
+        //         border-radius: 0 30px 30px 0;
+        //         z-index: 1;
+        //         text-transform: uppercase;
+        //     }
+
+        //     img {
+        //         aspect-ratio: 16 / 10.7;
+        //         object-fit: cover;
+        //         object-position: top;
+        //     }
+        // }
+        .img-wrapper{
+            @include borderRadius();
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $gradientOne;
+                color: $color-white;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                text-shadow: 1px 1px 2px rgba($color-black, 0.5);
+                padding: 0.5rem 2rem 0.5rem 1rem;
+                font-weight: bold;
+                font-size: 1.4rem;
+                border-radius: 30px;
+                z-index: 1;
+                text-transform: uppercase;
+            }
+        }
+
+        .content-wrapper {
+            padding: 2rem;
+
+            .heading-tertiary {
+                margin-bottom: 1rem;
+                color: $color-primary;
+            }
+        }
+    }
+
+    .owl-nav {
+        position: static;
+        display: flex;
+        gap: 5px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.circular-area-home {
+    .img-wrapper{
+        @include borderRadius();
     }
 }

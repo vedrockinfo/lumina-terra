@@ -1,3 +1,25 @@
+$(document).ready(function(){
+    $(".has-dropdown").click(function () {
+        $(this).toggleClass("clicked")
+    })
+});
+
+  $(document).ready(function () {
+    var currentPage = window.location.pathname.split("/").pop(); // e.g., 'career.html'
+
+    if (currentPage === "") {
+      currentPage = "index.html"; // Default to index.html if no file name in URL
+    }
+
+    $(".nav-list a").each(function () {
+      var href = $(this).attr("href");
+
+      if (href === currentPage) {
+        $(this).addClass("active");
+      }
+    });
+  });
+
 jQuery(window).scroll(function () {
     if (jQuery(this).scrollTop() > 165) {
         jQuery("header").addClass("fixed-header")
@@ -68,28 +90,7 @@ $(document).ready(function() {
         }
       });
     });
-
-
-    document.getElementById("dob").addEventListener("change", function () {
-        let dob = new Date(this.value);
-        let today = new Date();
-        let age = today.getFullYear() - dob.getFullYear();
-        let monthDiff = today.getMonth() - dob.getMonth();
-
-        if(monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())){
-            age--;
-        }
-        document.getElementById("age").value = age;
-    })
-
-    document.getElementById("dob").addEventListener("input", function() {
-        if (this.value) {
-            this.classList.add("has-value"); 
-        } else {
-            this.classList.remove("has-value");
-        }
-    });
-    
+        
     $('.management').owlCarousel({
     loop:true,
     margin:20,
@@ -110,3 +111,98 @@ $(document).ready(function() {
         }
     }
 });
+
+ $('.access-slider').owlCarousel({
+    loop:true,
+    margin:20,
+    dots:false,
+    nav:true,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    mouseDrag:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+
+ $('.circular-space').owlCarousel({
+    loop:true,
+    margin:20,
+    dots:false,
+    nav:true,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    mouseDrag:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+$('.future-slider').owlCarousel({
+    loop:true,
+    margin:20,
+    dots:false,
+    nav:true,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    mouseDrag:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+});
+
+$('.keyfeaturesSlider').owlCarousel({
+    loop:true,
+    margin:20,
+    dots:true,
+    nav:false,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    mouseDrag:true,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
+});
+$(document).ready(function () {
+      $('.detail-link').on('click', function () {
+        var target = $(this).data('target');
+
+        if ($(target).is(':visible')) {
+          $(target).slideUp(); // hide if already visible
+        } else {
+          $('.content').slideUp(); // hide all
+          $(target).slideDown();   // show selected
+        }
+      });
+    });

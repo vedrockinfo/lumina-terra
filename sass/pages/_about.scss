@@ -264,3 +264,12 @@
             text-align: center;
         }
     }
+    .shaping-thinker{
+        background: $gradientOne;
+        h2, li{
+            color: $color-white;
+        }
+        li:before{
+            background: $color-white;
+        }
+    }

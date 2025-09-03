@@ -12,12 +12,16 @@
 @import "./component/registration-form";
 @import "./component/welcomeArea";
 @import "./component/career_form";
+@import "./component/worldmap";
+@import "./component/googleVisitor";
 
 @import "./layout/footer";
 @import "./layout/header";
 
 @import "./pages/home";
+@import "./pages/faqs";
 @import "./pages/about";
+@import "./pages/blog";
 @import "./pages/pricing";
 @import "./pages/career";
 @import "./pages/program";
@@ -27,3 +31,4 @@
 
 @import "./pages/guidingMinds";
 @import "./pages/application";
+@import "./pages/campus";

@@ -61,7 +61,93 @@
 //     }
 
 header {
+    @include respond (minWidth768) {
+        .container{
+            max-width: 100%!important;
+        padding: 0 10px;
+        }
+    }
+
+    .has-dropdown {
+        @include respond (maxWidth768) {
+            .dropdown {
+                display: none;
+            }
+
+            &.clicked {
+                &>a {
+                    &::after {
+                        content: "-";
+                    }
+                }
+
+                .dropdown {
+                    display: block;
+                }
+            }
+        }
+
+        position: relative;
+
+        @include respond (minWidth768) {
+            margin-right: 5px;
+        }
+
+        &>a {
+            &::after {
+                content: "+";
+                display: inline-block;
+                padding-left: 3px;
+                opacity: 0.8;
+                width: 5px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+            &>a {
+                &::after {
+                    content: "-";
+                }
+            }
+
+            .dropdown {
+                @include respond (minWidth768) {
+                    height: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+        }
+
+        .dropdown {
+            @include respond (minWidth768) {
+                position: absolute;
+                left: 0;
+                z-index: 8;
+                width: 20rem;
+                background: $color-white;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                padding: 1rem;
+                border-radius: 0 0 1.6rem 1.6rem;
+                list-style: none;
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                border-top: 4px solid $color-primary;
+            }
+        }
+    }
+
     padding: 6px 0;
+
+    @media screen and (max-width:992px) and (min-width:768px) {
+        .container {
+            max-width: 100% !important;
+        }
+    }
 
 
     &.fixed-header {
@@ -74,8 +160,9 @@ header {
         background: $color-white;
         animation-duration: 0.6s;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        .nav-button{
-            background: $color-primary!important;
+
+        .nav-button {
+            background: $color-primary !important;
         }
     }
 
@@ -83,11 +170,23 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include respond (maxWidth575) {
+            padding: 5px 10px;
+        }
+
+        @media screen and (max-width:992px) and (min-width:768px) {
+            padding: 0;
+        }
     }
 
     .left-side {
         .logo {
             width: 15rem;
+
+            @media screen and (max-width:992px) and (min-width:768px) {
+                width: 14rem;
+            }
         }
     }
 
@@ -187,6 +286,14 @@ header {
                 text-transform: capitalize;
                 display: inline-block;
 
+                @media screen and (min-width:1200px) and (max-width:1399.9px) {
+                    font-size: 1.6rem;
+                }
+
+                @media screen and (min-width:992px) and (max-width:1199.9px) {
+                    font-size: 1.4rem;
+                }
+
                 &:hover {
                     text-decoration: none;
                 }
@@ -195,6 +302,26 @@ header {
             .nav-link {
                 color: $color-text;
                 padding: 5px 10px;
+                @include respond (minWidth1200){
+                    padding: 8px;
+                }
+                @media screen and (min-width:1200px) and (max-width:1264.5px)  {
+                    padding: 4px!important;
+                }
+                @media screen and (min-width:992px) and (max-width:1096px) {
+                    padding: 5px 3px!important;
+                }
+                transition: all 0.3s ease-in-out;
+
+                &:hover,
+                &.active {
+                    color: $color-primary;
+                }
+
+                @media screen and (max-width:992px) and (min-width:768px) {
+                    padding: 5px 10px;
+                    font-size: 13px;
+                }
 
             }
 
@@ -206,7 +333,8 @@ header {
                 border-radius: 3px;
                 box-shadow: 0 3px darken($color-primary, $amount: 10);
                 transition: 0.4s;
-                &:hover{
+
+                &:hover {
                     background: $color-secondary;
                 }
 

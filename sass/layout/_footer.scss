@@ -122,6 +122,9 @@ footer {
                 bottom: 2rem;
                 right: 2rem;
                 z-index: 9;
+                @include respond (maxWidth768){
+                    bottom: 7rem;
+                }
             }
 
             li {
@@ -144,19 +147,31 @@ footer {
     }
     .bottom-footer{
         background: $color-primary;
-        text-align: center;
         color: $color-white;
         padding: 2rem 0;
+        .row{
+            align-items: center;
+        }
         p{
             font-size: 14px;
             margin-bottom: 0;
+        }
+        .privacy-policy{
+            margin-bottom: 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            li{
+                margin: 0;
+                line-height: 1.7;
+            }
         }
         a{
             transition: all 0.4s;
             color: $color-white;
             text-decoration: none;
-            font-weight: 500;
-            display: none;
+            font-size: 14px;
             &:hover{
                 text-decoration: underline;
                 text-underline-position: below;

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Terra | Privacy Policy</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #0f172a;
+            /* slate-900 */
+            --muted: #475569;
+            /* slate-600 */
+            --primary: #0288D1;
+            /* brand */
+            --primary-ink: #ffffff;
+            --card: #f8fafc;
+            /* slate-50 */
+            --border: #e2e8f0;
+            /* slate-200 */
+            --success: #16a34a;
+            --warning: #f59e0b;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b1220;
+                --fg: #e2e8f0;
+                --muted: #94a3b8;
+                --card: #0f172a;
+                --border: #1f2937;
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.6;
+        }
+
+        .head-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: .85rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: var(--card);
+            color: var(--muted);
+            padding: .35rem .6rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            font-size: .8rem
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .2px;
+            color: var(--fg);
+        }
+
+        .title {
+            font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem);
+            margin: 1.2rem 0 .4rem;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .pill {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: .25rem .6rem;
+            border-radius: 999px;
+            font-size: 1.6rem;
+        }
+
+        h2{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav.toc {
+            margin: 1.25rem 0 2rem;
+            border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: 14px;
+        }
+
+        nav.toc .toc-inner {
+            padding: .75rem 1rem;
+        }
+
+        nav.toc h2 {
+            margin: 0 0 .25rem;
+            font-size: 2rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .btn:hover{
+            background: #16a34a;
+            color: #fff;
+        }
+
+        nav.toc ol {
+            margin: .25rem 0 0 1rem;
+            padding: 0;
+        }
+
+        nav.toc a {
+            color: #38833f;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        nav.toc a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            margin: .5rem 0 .5rem 1.2rem;
+        }
+
+        li {
+            margin: .25rem 0;
+        }
+
+        .actions {
+            display: flex;
+            gap: .6rem;
+            flex-wrap: wrap;
+            margin: 1rem 0 2rem;
+        }
+
+        .btn {
+            appearance: none;
+            border: 1px solid var(--border);
+            background: #68bf71;
+            color: var(--primary-ink);
+            padding: .6rem .9rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+
+        .btn.secondary {
+            background: var(--card);
+            color: var(--fg);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding-top: 1.25rem;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        /* Print styles */
+        @media print {
+
+            header,
+            .actions,
+            nav.toc {
+                display: none !important;
+            }
+
+            body {
+                background: #fff;
+                color: #000;
+            }
+
+            section {
+                break-inside: avoid;
+                background: #fff;
+                border-color: #ddd;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="online-counselling">
+        <a href="https://forms.gle/A2PqCFi7486vxwwi6" target="_blank">Register for online
+            counselling</a>
+    </div> -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="left-side">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="" class="img-fluid logo">
+                    </a>
+                </div>
+                <div class="right-side">
+                    <button type="button" id="collapsable">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li class="mobile-logo"><a href="index.html"><img src="images/logo.png" alt=""
+                                    class="img-fluid logo"></a></li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">about</a>
+                            <ul class="dropdown">
+                                <li class="nav-item"><a href="about-us.html" class="nav-link">about us</a></li>
+                                <li class="nav-item"><a href="guiding-minds.html" class="nav-link">guiding minds</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="why-lumina.html" class="nav-link">LT difference</a></li>
+
+                        <li class="nav-item"><a href="curriculum.html" class="nav-link">curriculum</a></li>
+                        <li class="nav-item"><a href="campus.html" class="nav-link">campus</a></li>
+                        <li class="nav-item"><a href="program.html" class="nav-link">program</a></li>
+                        <li class="nav-item"><a href="fee.html" class="nav-link">Fee structure & uniform</a></li>
+                        <li class="nav-item"><a href="career.html" class="nav-link">career</a></li>
+                        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+                        <li class="nav-item"><a href="blogs-articles.html" class="nav-link">Blogs & Articles</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-button">contact us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero-section">
+            <img src="images/privacy-policy-bg-01.jpg" alt="" class="img-fluid" style="object-position: 100%">
+            <h1>Privacy Policy</h1>
+        </section>
+        <section class="privacy-area m-top wrap" id="top">
+            <div class="container">
+                <p class="subtitle">This Privacy Policy ("Policy") describes how <strong>Lumina Terra Educational
+                        Institution</strong> ("Institution," "we," "our," or "us") collects, uses, discloses, and
+                    safeguards personal information when parents, guardians, and students ("you" or "users") access or
+                    use the Lumina Terra Parent Portal mobile and web application ("Application"). By using the
+                    Application, you acknowledge that you have read and understood this Policy and consent to the
+                    collection and use of your information as described herein.</p>
+
+                <div class="meta" role="contentinfo">
+                    <span class="pill">Effective Date: <time datetime="2025-08-26">August 26, 2025</time></span>
+                    <span class="pill">Jurisdiction: India (and applicable local laws)</span>
+                    <span class="pill">Last Reviewed: <time datetime="2025-08-26">August 26, 2025</time></span>
+                </div>
+
+                <div class="actions" aria-label="document actions">
+                    <button class="btn" onclick="window.print()" title="Print this policy">Print / Save as PDF</button>
+                    <a class="btn secondary" href="#contact" title="Jump to contact section">Contact Us</a>
+                </div>
+
+                <nav class="toc" aria-label="Table of Contents">
+                    <div class="toc-inner">
+                        <h2>Table of Contents</h2>
+                        <ol>
+                            <li><a href="#info-we-collect">Information We Collect</a></li>
+                            <li><a href="#purpose-of-processing">Purpose of Processing</a></li>
+                            <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+                            <li><a href="#data-disclosure">Data Disclosure</a></li>
+                            <li><a href="#data-retention">Data Retention</a></li>
+                            <li><a href="#data-security">Data Security</a></li>
+                            <li><a href="#childrens-privacy">Children’s Privacy</a></li>
+                            <li><a href="#your-rights">Your Rights</a></li>
+                            <li><a href="#changes">Changes to This Policy</a></li>
+                            <li><a href="#contact">Contact Information</a></li>
+                        </ol>
+                    </div>
+                </nav>
+
+                <section id="info-we-collect">
+                    <h2>1. Information We Collect</h2>
+                    <p>We may collect and process the following categories of information:</p>
+                    <ul>
+                        <li><strong>Parent/Guardian Information:</strong> Name, contact details (mobile number, email
+                            address), login credentials, and related account information.</li>
+                        <li><strong>Student Information:</strong> Name, class details, roll number, attendance records,
+                            academic performance, homework submissions, and related educational data.</li>
+                        <li><strong>Communication Records:</strong> Messages exchanged between parents/guardians and
+                            teachers via the Application.</li>
+                        <li><strong>Files and Submissions:</strong> Documents, photographs, or other files uploaded to
+                            the Application.</li>
+                        <li><strong>Technical Data:</strong> Device information, operating system details, IP address,
+                            and usage analytics for security and performance purposes.</li>
+                    </ul>
+                </section>
+
+                <section id="purpose-of-processing">
+                    <h2>2. Purpose of Processing</h2>
+                    <p>Personal information is collected and processed strictly for the following purposes:</p>
+                    <ul>
+                        <li>To provide parents/guardians with secure access to their child’s academic information,
+                            including attendance, assignments, notices, and performance updates.</li>
+                        <li>To enable communication between parents/guardians and authorized teaching or administrative
+                            staff.</li>
+                        <li>To manage authentication, account security, and user support.</li>
+                        <li>To improve the performance, functionality, and reliability of the Application.</li>
+                        <li>To comply with applicable laws, regulations, or legal processes.</li>
+                    </ul>
+                </section>
+
+                <section id="legal-basis">
+                    <h2>3. Legal Basis for Processing</h2>
+                    <p>Processing of personal information is carried out in accordance with applicable data protection
+                        laws and is based on one or more of the following grounds:</p>
+                    <ul>
+                        <li>Your consent to the processing of your information.</li>
+                        <li>The necessity of processing for the performance of an educational or contractual obligation.
+                        </li>
+                        <li>Compliance with legal or regulatory requirements.</li>
+                        <li>The legitimate interests of the Institution, provided such interests do not override your
+                            fundamental rights and freedoms.</li>
+                    </ul>
+                </section>
+
+                <section id="data-disclosure">
+                    <h2>4. Data Disclosure</h2>
+                    <p>We do not sell, rent, or trade personal information. Disclosure of personal information may occur
+                        only under the following circumstances:</p>
+                    <ul>
+                        <li>To authorized employees, teachers, and administrative staff of the Institution strictly on a
+                            need-to-know basis.</li>
+                        <li>To third-party <em>service providers</em> engaged under contractual obligations to support
+                            hosting, storage, or communication services, provided such parties are bound by
+                            confidentiality and data protection obligations.</li>
+                        <li>To governmental authorities, regulators, or courts of law, where disclosure is required
+                            under applicable law.</li>
+                    </ul>
+                </section>
+
+                <section id="data-retention">
+                    <h2>5. Data Retention</h2>
+                    <p>Personal information shall be retained only for as long as necessary to fulfill the purposes for
+                        which it was collected, or as required under applicable law. Upon a parent/guardian’s request,
+                        or upon the student’s exit from the Institution, personal data may be deleted or anonymized
+                        subject to legal and regulatory requirements.</p>
+                </section>
+
+                <section id="data-security">
+                    <h2>6. Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to safeguard personal information,
+                        including but not limited to:</p>
+                    <ul>
+                        <li>Encryption of sensitive data both in transit and at rest.</li>
+                        <li>Secure authentication mechanisms, including token-based session management.</li>
+                        <li>Access restrictions to ensure that only authorized personnel may process student data.</li>
+                        <li>Regular system monitoring, security reviews, and updates.</li>
+                    </ul>
+                </section>
+
+                <section id="childrens-privacy">
+                    <h2>7. Children’s Privacy</h2>
+                    <p>The Application contains information relating to minors, which is accessed and managed by parents
+                        or legal guardians. We do not knowingly collect information directly from children without
+                        parental or institutional authorization. Parents and guardians retain control over their child’s
+                        information and may request modification or deletion of such data, subject to legal obligations.
+                    </p>
+                </section>
+
+                <section id="your-rights">
+                    <h2>8. Your Rights</h2>
+                    <p>Subject to applicable law, you have the following rights with respect to your personal
+                        information:</p>
+                    <ul>
+                        <li>The right to access and obtain a copy of your information.</li>
+                        <li>The right to request correction of inaccurate or incomplete data.</li>
+                        <li>The right to request deletion of your personal information, subject to legal or regulatory
+                            obligations.</li>
+                        <li>The right to withdraw consent for processing, where processing is based on consent.</li>
+                        <li>The right to raise concerns with a relevant data protection authority, if applicable.</li>
+                    </ul>
+                    <p>Requests to exercise these rights should be submitted in writing to the contact information
+                        provided below.</p>
+                </section>
+
+                <section id="changes">
+                    <h2>9. Changes to This Policy</h2>
+                    <p>We reserve the right to amend or update this Policy from time to time. Any material changes will
+                        be communicated through the Application or via electronic notice. Continued use of the
+                        Application after such changes constitutes acceptance of the revised Policy.</p>
+                </section>
+
+                <section id="contact">
+                    <h2>10. Contact Information</h2>
+                    <address>
+                        <strong>Lumina Terra Educational Institution</strong><br />
+                        Email: <a href="mailto:info@luminaterra.org" class="internal-link">info@luminaterra.org</a><br />
+                        Phone: <a href="tel:+917408405000" class="internal-link">+91-740 840 5000</a><br />
+                        Address: <span class="internal-link" style="text-decoration: none;">Next to Omaxe Palace, Opp. Palassio Mall, Lucknow</span>
+                    </address>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="" class="img-flui">
+                    </div>
+                    <div class="footer-text">
+                        <p>At Lumina Terra, we believe learning should feel like it belongs to the child. Set in
+                            nature-rich
+                            spaces and shaped by curiosity, our approach nurtures thinkers, doers, and quiet observers
+                            alike.
+                            It’s education that grows with them — relevant, real, and rooted.</p>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="admission.html">Admissions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-widgets">quick links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about-us.html">about us</a></li>
+                        <li><a href="curriculum.html">curriculum</a></li>
+                        <li><a href="career.html">career</a></li>
+                        <li><a href="guiding-minds.html">guiding minds</a></li>
+                        <li><a href="https://lumina-terra.web.app/" target="_blank">Online Admission Form</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">
+                            <span class="footer-contact-icon">
+                                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span class="footer-contact-text">Next to Omaxe Palace, Opp. Palassio Mall, Lucknow</span>
+
+                        </li>
+                        <li class="footer-contact-item">
+
+
+                            <span class="footer-contact-icon">
+                                <i aria-hidden="true" class="fas fa-phone"></i> </span>
+                            <span class="footer-contact-text"><a href="tel:+917408405000">+91-740 840
+                                    5000</a></span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <span class="footer-contact-icon">
+                                <i aria-hidden="true" class="fas fa-envelope"></i> </span>
+                            <span class="footer-contact-text"><a
+                                    href="mailto:info@luminaterra.org">info@luminaterra.org</a></span>
+                        </li>
+                    </ul>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=61578070859177&mibextid=rS40aB7S9Ucbxw6v"
+                                    target="_blank" style="--fclr:#557dbc;">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a></li>
+                            <li class="whtap"><a href="https://wa.me/917408405000" target="_blank"
+                                    style="--fclr:#29a71a;">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a></li>
+                            <!-- <li><a href="" target="_blank" style="--fclr:#03a9f4;">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a></li> -->
+                            <li><a href="https://www.instagram.com/luminaterra_lucknow/" target="_blank"
+                                    style="--fclr:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer m-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>© 2025 by Lumina Terra School of Nations</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="privacy-policy">
+                            <li><a href="privay-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="download-brochure">
+            <a href="pdf/Lumina-Terra-Prospectus-2_2025-26.pdf" target="_blank">Our Prospectus</a>
+        </div>
+    </footer>
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/jquery-ui.min.js"></script>
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="vendor/js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -5,9 +5,15 @@
     background-image: url(../../images/hero-02.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 112vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
+    @media screen and (min-width:1300px) {
+        min-height: 112vh;
+    }
+    @include respond (maxWidth992){
+        min-height: auto;
+    }
 
     &::before {
         content: "";
@@ -32,23 +38,44 @@
     }
 
     @media screen and (max-height:600px) {
-        min-height: 72rem;
+        min-height: 55rem;
     }
 
     .hero-grid {
-        display: flex;
-        flex-wrap: nowrap;
+       display: grid;
+       @include respond (minWidth768){
+        grid-template-columns: 5rem 500px 5rem;
+       }
+        min-height: 100vh;
+        align-items: flex-start;
         justify-content: space-between;
-        align-items: center;
-        min-height: 112vh;
-
-        @media screen and (max-height:600px) {
-            min-height: 72rem;
-        }
-
         @include respond (maxWidth768) {
-            padding-top: 7rem;
+            display: block;
         }
+        .bees{
+            padding-top: 3rem;
+            @include respond (maxWidth768) {
+                display: none;
+            }
+        }
+
+        
+    @media screen and (min-width:1300px) {
+        min-height: 112vh;
+    }
+
+        @include respond (maxWidth992) {
+            padding-top: 0;
+            min-height: 60rem;
+        }
+
+//         @media (min-width: 1024px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+//             min-height: 60rem!important;
+// }
+
+
+
+        
 
         .hero-grid-item {
 
@@ -57,102 +84,71 @@
                 max-width: 100%;
 
                 &:first-child {
-                    padding: 30px 0 20px 0;
+                    // padding: 30px 0 20px 0;
                     width: max-content;
-                    margin: auto;
+                    // margin: auto;
                 }
             }
 
             .content-wrapper {
                 position: relative;
-    // background: #0000003b;
-    // padding: 30px;
-    color: #fff;
-    // margin-top: 8rem;
-
+                color: #fff;
+                background: #46c4dc;
+                text-align: center;
+                position: relative;
+                padding: 15px 20px 30px 20px;
                 @include respond (maxWidth768) {
                     text-align: center;
                 }
 
-                .rouded{
-                    background: $color-white;
-                    color: #214d25;
-                    font-size: 2rem;
-                    margin-bottom: 1.5rem;
-                    padding: 1rem 3rem;
-                    border-radius: 50px;
-                    display: inline-block;
-                    border: 2px solid #214d25;
-                    outline: 2px solid $color-white;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                }
-                a {
-                    color: $color-white;
-                    background: $color-primary;
-                    padding: 7.5px 15px;
-                    display: inline-block;
-                    margin: 2rem auto 0;
-                    font-family: $fontFour;
-                    font-size: 28px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                        background: darken($color-primary, $amount: 10);
-                    }
-
-                    @include respond (maxWidth1200) {
-                        font-size: 20px;
-                    }
-
-                    @include respond (maxWidth992) {
-                        font-size: 18px;
-                    }
-
-                    @include respond (maxWidth768) {
-                        font-size: 16px;
-                        line-height: 1.5;
-                        letter-spacing: 3px;
-                    }
+                span.rouded {
+                    font-weight: 400;
+                    font-size: 18px;
                 }
 
                 h5{
                     margin-top: 2rem;
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 0.5rem;
+                    background: #ffd16d;
+                    display: inline-block;
+                    border: 1px solid $color-white;
+                    line-height: 1;
+                    position: absolute;
+                    bottom: -2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40rem;
 
                     span{
                         display: inline-block;
-                        color: #214d25;
                             font-size: 1.6rem;
-                            font-family: $fontPrimary;
+                            font-family: $fontFour;
                             text-transform: uppercase;
-                            padding: 5px 13px;
                             font-weight: 600;
-                            border: 2px solid #214d25;
-                    outline: 2px solid $color-white;
-                            margin-right: 5px;
-                            border-radius: 30px;
-                            background: $color-white;
+                            padding: 1rem 1rem;
+                            &:not(:last-child) {
+                                border-right: 2px solid $color-text;
+                            }
+                            color: $color-text;
+                            font-weight: bold;
                     }
                 }
 
                 h1 {
-                    font-family: $fontPrimary;
+                    font-family: $fontFour;
                     text-transform: capitalize;
                     color: $color-white;
-                    font-size: 60px;
+                    font-size: 54px;
                     font-weight: 700;
-                    text-shadow: 5px 5px 4px rgba($color-primary, $alpha: 0.4);
+                    // text-shadow: 5px 5px 4px rgba($color-primary, $alpha: 0.4);
+                    line-height: 0.7;
 
                     @include respond (maxWidth768) {
                         text-align: center;
                     }
 
-                    margin: 0;
+                    margin: 10px 0 5px;
 
 
 
@@ -172,21 +168,17 @@
                         text-align: center;
                     }
 
-                    font-size: 38px;
-                    text-shadow: 3px 3px 4px rgba($color-primary, $alpha: 0.4);
+                    font-size: 31.5px;
+                    // text-shadow: 3px 3px 4px rgba($color-primary, $alpha: 0.4);
                     text-transform: uppercase;
                     color: $color-white;
-                    font-family: "mostiva-bold";
+                    font-family: $fontFour;
                     margin: 0;
                     letter-spacing: 1px;
                     font-weight: 700;
-                    // text-shadow: 2px 2px 4px #00000057;
-                    border-top: 2px solid;
-                    border-bottom: 2px solid;
-                    padding: 5px 15px;
                     display: inline-block;
-                    margin-bottom: 15px;
-                    margin-top: 10px;
+                    margin-bottom: 6px;
+                    margin-top: 5px;
 
                     @include respond (maxWidth1200) {
                         font-size: 30px;
@@ -197,10 +189,16 @@
                     }
                 }
 
+                p{
+                    margin-top: 1.5rem;
+                    line-height: 1.5;
+                    // text-shadow: 2px 2px 4px rgba($color-primary, $alpha: 0.4);
+                }
+
                 h4 {
-                    text-align: left;
+                    text-align: center;
                     color: $color-white;
-                    text-shadow: 2px 2px 4px rgba($color-primary, $alpha: 0.4);
+                    // text-shadow: 2px 2px 4px rgba($color-primary, $alpha: 0.4);
 
                     @include respond (maxWidth575) {
                         text-align: center;
@@ -210,9 +208,9 @@
                         line-height: 1.5;
                     }
 
-                    font-size: 24px;
+                    font-size: 16px;
                     text-transform: uppercase;
-                    font-family: $fontPrimary;
+                    font-family: $fontFour;
                     margin: 0;
                     font-weight: bold;
                     position: relative;
@@ -234,11 +232,11 @@
                     //     }
                     // }
                     @include respond (maxWidth1200) {
-                        font-size: 40px;
+                        font-size: 18px;
                     }
 
                     @include respond (maxWidth992) {
-                        font-size: 30px;
+                        font-size: 16px;
                     }
                 }
 
@@ -324,8 +322,5 @@
             }
         }
 
-        @include respond (maxWidth768) {
-            flex-direction: column;
-        }
     }
 }

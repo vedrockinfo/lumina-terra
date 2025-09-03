@@ -71,3 +71,49 @@
         font-size: 16px;
     }
 }
+.uniform-table {
+        overflow: auto;
+        border-radius: 1.6rem;
+
+        table {
+            overflow: hidden;
+        }
+
+        thead {
+            background: $color-primary;
+            color: $color-white;
+            th{
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        th,
+        td {
+            padding: 10px;
+            width: 50%;
+            strong.d-block {
+    color: $color-white;
+    margin-top: 1rem;
+    background: $color-primary;
+    display: inline-block;
+    padding: 1rem;
+    width: fit-content;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 28px;
+    margin-bottom: 1.5rem;
+}
+        }
+    }
+
+    .uniform-head{
+        text-transform: capitalize;
+    font-size: 4.8rem;
+    line-height: 1;
+    margin-bottom: 3rem;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+    }
