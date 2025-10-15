@@ -303,10 +303,11 @@ header {
                 color: $color-text;
                 padding: 5px 10px;
                 @include respond (minWidth1200){
-                    padding: 8px;
+                    padding: 8px 5px;
                 }
                 @media screen and (min-width:1200px) and (max-width:1264.5px)  {
                     padding: 4px!important;
+                    font-size: 1.5rem;
                 }
                 @media screen and (min-width:992px) and (max-width:1096px) {
                     padding: 5px 3px!important;
